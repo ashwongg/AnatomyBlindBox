@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question_collection" format=3 uid="uid://dw6d0o8agcdi3"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_1th54"]
+[ext_resource type="Resource" uid="uid://byqavcduq1hfp" path="res://resources/questions/question_1.tres" id="2_gqo57"]
+[ext_resource type="Script" uid="uid://bxsyboerl8ljf" path="res://resources/question_collection/question_collection.gd" id="2_m6j5j"]
+[ext_resource type="Resource" uid="uid://stppv2bw0kib" path="res://resources/questions/question_2.tres" id="3_f08ul"]
+[ext_resource type="Resource" uid="uid://bjrkgwx74p8er" path="res://resources/questions/question_3.tres" id="4_cxkdq"]
+
+[resource]
+script = ExtResource("2_m6j5j")
+collection = Array[ExtResource("1_1th54")]([ExtResource("2_gqo57"), ExtResource("3_f08ul"), ExtResource("4_cxkdq")])
+metadata/_custom_type_script = "uid://bxsyboerl8ljf"

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bhgfqyg77opfn"]
+
+[ext_resource type="Texture2D" uid="uid://7f7nx4r1y7gi" path="res://Assets/trading cards.png" id="1_oxvuh"]
+[ext_resource type="Script" uid="uid://dernfftkgtuhp" path="res://Scenes/trading_card.gd" id="1_xop4a"]
+
+[node name="TradingCard" type="Control" unique_id=792337902]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xop4a")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1050184165]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1159.0
+offset_bottom = 657.0
+texture = ExtResource("1_oxvuh")
+expand_mode = 1
+
+[node name="Window" type="Window" parent="." unique_id=601927093]
+oversampling_override = 1.0
+title = "Card"
+initial_position = 1
+size = Vector2i(300, 400)
+visible = false
+borderless = true
+popup_window = true
+
+[node name="show_LungCard" type="TextureButton" parent="Window" unique_id=1213973131]
+visible = false
+offset_right = 301.0
+offset_bottom = 399.0
+
+[node name="LungCard" type="TextureButton" parent="." unique_id=1135955790]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 143.0
+offset_right = 360.0
+offset_bottom = 339.0
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="Window/show_LungCard" to="." method="_on_show_lung_card_pressed"]
+[connection signal="pressed" from="LungCard" to="." method="_on_lung_card_pressed"]

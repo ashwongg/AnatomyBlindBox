@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://clsrl1rb1i1uy"]
+
+[ext_resource type="Texture2D" uid="uid://d0og7dmtkam26" path="res://Assets/quiz_page.png" id="1_kninm"]
+[ext_resource type="Script" uid="uid://bauvhvk0kjd1p" path="res://Scripts/quiz.gd" id="1_y1tew"]
+[ext_resource type="Resource" uid="uid://dw6d0o8agcdi3" path="res://resources/question_collection/question_collection_1.tres" id="2_i0i4q"]
+
+[node name="Node2D" type="Node2D" unique_id=1395772487]
+script = ExtResource("1_y1tew")
+quiz_c = ExtResource("2_i0i4q")
+color_right = Color(0.25644788, 0.65125906, 0, 1)
+color_wrong = Color(0.67851394, 0.07579858, 0.036591884, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=104882379]
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_kninm")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=741956553]
+offset_left = 208.025
+offset_top = 515.0
+offset_right = 390.025
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "1"
+
+[node name="Control" type="Control" parent="." unique_id=375117892]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label_Question" type="Label" parent="Control" unique_id=754097939]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.5500002
+anchor_top = 3.719
+anchor_right = 14.324
+anchor_bottom = 5.9
+offset_left = -20.000008
+offset_top = -1.7600098
+offset_right = 16.040161
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+theme_override_font_sizes/font_size = 39
+text = "Test Question 1"
+autowrap_mode = 3
+
+[node name="Image" type="TextureRect" parent="Control" unique_id=1709814637]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 60.0
+offset_right = 913.0
+offset_bottom = 362.0
+expand_mode = 5
+
+[node name="Question" type="Node2D" parent="Control" unique_id=1715757520]
+position = Vector2(126, 155)
+
+[node name="Button_A" type="Button" parent="Control/Question" unique_id=1539344449]
+offset_left = -32.0
+offset_top = 147.0
+offset_right = 123.0
+offset_bottom = 212.0
+text = "A"
+
+[node name="Button_B" type="Button" parent="Control/Question" unique_id=1359248181]
+offset_left = 198.0
+offset_top = 145.0
+offset_right = 353.0
+offset_bottom = 210.0
+text = "B"
+
+[node name="Button_C" type="Button" parent="Control/Question" unique_id=963400407]
+offset_left = -31.0
+offset_top = 273.0
+offset_right = 124.0
+offset_bottom = 338.0
+text = "C"
+
+[node name="Button_D" type="Button" parent="Control/Question" unique_id=754506820]
+offset_left = 201.0
+offset_top = 274.0
+offset_right = 356.0
+offset_bottom = 339.0
+text = "D"

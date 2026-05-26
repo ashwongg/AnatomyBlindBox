@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c87xqks3l0rh"]
+
+[ext_resource type="Script" uid="uid://cyu2jxe1p4lne" path="res://Scripts/main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ch2eohkkwjkls" path="res://Assets/landing_page.png" id="1_ig7tw"]
+
+[node name="Control" type="Control" unique_id=1116984972]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h2yge")
+
+[node name="LandingPage" type="TextureRect" parent="." unique_id=2120359815]
+layout_mode = 0
+offset_left = -3.999878
+offset_top = -6.999939
+offset_right = 1499.9094
+offset_bottom = 1001.07996
+scale = Vector2(0.7673334, 0.64975)
+texture = ExtResource("1_ig7tw")
+
+[node name="Play" type="Button" parent="." unique_id=295055985]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 172.0
+offset_right = 950.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 42
+text = "Play
+"
+
+[node name="Blind_Box" type="Button" parent="." unique_id=902894250]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 303.0
+offset_right = 951.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 42
+text = "Blind Box"
+
+[node name="Credits" type="Button" parent="." unique_id=530322934]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 432.0
+offset_right = 953.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+
+[node name="Label" type="Label" parent="." unique_id=1651009175]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 41.0
+offset_right = 920.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "1"
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Blind_Box" to="Blind_Box" method="_on_pressed"]
+[connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]

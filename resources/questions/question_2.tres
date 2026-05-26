@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://stppv2bw0kib"]
+
+[ext_resource type="Texture2D" uid="uid://be88v5u8xnslm" path="res://Assets/Questions_images/Heart.png" id="1_2s40t"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_hw5gd"]
+
+[resource]
+script = ExtResource("1_hw5gd")
+question_info = "What is this organ?"
+type = 1
+question_image = ExtResource("1_2s40t")
+options = Array[String](["Brain", "Heart", "Eye", "Foot"])
+correct = "Heart"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

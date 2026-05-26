@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bhgfqyg77opfn"]
+
+[ext_resource type="Texture2D" uid="uid://7f7nx4r1y7gi" path="res://Assets/trading cards.png" id="1_oxvuh"]
+[ext_resource type="Script" uid="uid://dernfftkgtuhp" path="res://Scenes/trading_card.gd" id="1_xop4a"]
+
+[node name="TradingCard" type="Control" unique_id=792337902]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xop4a")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1050184165]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 658.0
+texture = ExtResource("1_oxvuh")
+expand_mode = 1
+
+[node name="Window" type="Window" parent="." unique_id=601927093]
+oversampling_override = 1.0
+borderless = true
