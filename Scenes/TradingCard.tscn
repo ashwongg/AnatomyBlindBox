@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7f7nx4r1y7gi" path="res://Assets/trading cards.png" id="1_oxvuh"]
 [ext_resource type="Script" uid="uid://dernfftkgtuhp" path="res://Scripts/trading_card.gd" id="1_xop4a"]
+[ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_72lva"]
 
 [node name="TradingCard" type="Control" unique_id=792337902]
 layout_mode = 3
@@ -16,44 +17,137 @@ script = ExtResource("1_xop4a")
 layout_mode = 0
 offset_left = 1.0
 offset_top = -1.0
-offset_right = 1159.0
-offset_bottom = 657.0
+offset_right = 1279.0
+offset_bottom = 723.0
 texture = ExtResource("1_oxvuh")
 expand_mode = 1
 
 [node name="Window" type="Window" parent="." unique_id=601927093]
+transparent_bg = true
 oversampling_override = 1.0
 title = "Card"
 initial_position = 1
 size = Vector2i(300, 400)
-visible = false
 borderless = true
+transparent = true
 popup_window = true
 
-[node name="show_LungCard" type="TextureButton" parent="Window" unique_id=1213973131]
+[node name="show_BackCard" type="TextureButton" parent="Window" unique_id=956824188]
 offset_right = 301.0
 offset_bottom = 399.0
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Rare_HeartCard" type="TextureButton" parent="." unique_id=1850346112]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 410.0
+offset_right = 191.0
+offset_bottom = 594.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HeartCard" type="TextureButton" parent="." unique_id=90784261]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 188.0
+offset_right = 195.0
+offset_bottom = 372.0
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="LungCard" type="TextureButton" parent="." unique_id=1135955790]
 layout_mode = 0
-offset_left = 203.0
-offset_top = 143.0
-offset_right = 348.0
-offset_bottom = 336.0
+offset_left = 204.0
+offset_top = 188.0
+offset_right = 341.0
+offset_bottom = 371.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BrainCard" type="TextureButton" parent="." unique_id=1076392011]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 184.0
+offset_right = 496.0
+offset_bottom = 373.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Rare_BrainCard" type="TextureButton" parent="." unique_id=1765818929]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 410.0
+offset_right = 496.0
+offset_bottom = 599.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Livercard" type="TextureButton" parent="." unique_id=1060550368]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 190.0
+offset_right = 640.0
+offset_bottom = 373.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="KidneyCard" type="TextureButton" parent="." unique_id=1149494319]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 190.0
+offset_right = 792.0
+offset_bottom = 373.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="StomachCard" type="TextureButton" parent="." unique_id=63516481]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 190.0
+offset_right = 940.0
+offset_bottom = 370.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Small_IntestineCard" type="TextureButton" parent="." unique_id=888910654]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 187.0
+offset_right = 1084.0
+offset_bottom = 376.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Large_IntestineCard" type="TextureButton" parent="." unique_id=3621815]
+layout_mode = 0
+offset_left = 1095.0
+offset_top = 187.0
+offset_right = 1233.0
+offset_bottom = 373.0
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Back" type="Button" parent="." unique_id=451664394]
 layout_mode = 0
-offset_left = 868.0
-offset_top = 550.0
-offset_right = 1113.0
-offset_bottom = 629.0
+offset_left = 978.0
+offset_top = 588.0
+offset_right = 1239.0
+offset_bottom = 678.0
 theme_override_font_sizes/font_size = 42
-text = "Back
-"
+icon = ExtResource("3_72lva")
+flat = true
 
 [connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
-[connection signal="pressed" from="Window/show_LungCard" to="." method="_on_show_lung_card_pressed"]
+[connection signal="pressed" from="Window/show_BackCard" to="." method="_on_show_back_card_pressed"]
+[connection signal="pressed" from="Rare_HeartCard" to="." method="_on_rare_heart_card_pressed"]
+[connection signal="pressed" from="HeartCard" to="." method="_on_heart_card_pressed"]
 [connection signal="pressed" from="LungCard" to="." method="_on_lung_card_pressed"]
+[connection signal="pressed" from="BrainCard" to="." method="_on_brain_card_pressed"]
+[connection signal="pressed" from="Rare_BrainCard" to="." method="_on_rare_brain_card_pressed"]
+[connection signal="pressed" from="Livercard" to="." method="_on_liver_card_pressed"]
+[connection signal="pressed" from="KidneyCard" to="." method="_on_kidney_card_pressed"]
+[connection signal="pressed" from="StomachCard" to="." method="_on_stomach_card_pressed"]
+[connection signal="pressed" from="Small_IntestineCard" to="." method="_on_small_intestine_card_pressed"]
+[connection signal="pressed" from="Large_IntestineCard" to="." method="_on_large_intestine_card_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

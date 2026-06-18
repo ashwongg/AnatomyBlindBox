@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 GlobalVariables="*uid://sfxtkt5uli6j"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/initial_position_type=0
+window/size/minimize_disabled=true
+window/stretch/mode="canvas_items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

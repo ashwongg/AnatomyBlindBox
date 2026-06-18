@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca82en0vrcjoa" path="res://Scripts/credits.gd" id="1_xbebw"]
 [ext_resource type="Texture2D" uid="uid://cedw614h63x02" path="res://Assets/credits_page.png" id="1_ynf4x"]
+[ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_7xmno"]
 
 [node name="Credits" type="Control" unique_id=1180079760]
 layout_mode = 3
@@ -16,19 +17,21 @@ script = ExtResource("1_xbebw")
 layout_mode = 0
 offset_left = -3.999878
 offset_top = -6.999939
-offset_right = 1496.0001
-offset_bottom = 993.00006
+offset_right = 1668.024
+offset_bottom = 1108.8137
 scale = Vector2(0.7673334, 0.64975)
 texture = ExtResource("1_ynf4x")
 
 [node name="Back" type="Button" parent="." unique_id=913762814]
 layout_mode = 0
-offset_left = 846.0
-offset_top = 502.0
-offset_right = 1091.0
-offset_bottom = 581.0
+offset_left = 978.0
+offset_top = 593.0
+offset_right = 1223.0
+offset_bottom = 672.0
 theme_override_font_sizes/font_size = 42
-text = "Back
+text = "
 "
+icon = ExtResource("3_7xmno")
+flat = true
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

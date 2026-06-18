@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://crc0kumqiswyx"]
+
+[ext_resource type="Script" uid="uid://be45dur80cfu8" path="res://Scripts/visit_skelly.gd" id="1_ivyyr"]
+[ext_resource type="Texture2D" uid="uid://bc56ofxsxwpvp" path="res://Assets/visit_skelly.png" id="2_hyles"]
+[ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_by7u1"]
+[ext_resource type="Texture2D" uid="uid://dtij5qf5wgpny" path="res://Assets/Skelly Organs/lungs.png" id="3_cf0tt"]
+
+[node name="VisitSkelly" type="Control" unique_id=2126481693]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ivyyr")
+
+[node name="LandingPage" type="TextureRect" parent="." unique_id=1325577685]
+layout_mode = 0
+offset_left = -3.999878
+offset_top = -6.999939
+offset_right = 1671.9337
+offset_bottom = 1113.4309
+scale = Vector2(0.7673334, 0.64975)
+texture = ExtResource("2_hyles")
+
+[node name="Back" type="Button" parent="." unique_id=1547266867]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 641.0
+offset_right = 1290.0
+offset_bottom = 731.0
+theme_override_font_sizes/font_size = 42
+icon = ExtResource("3_by7u1")
+flat = true
+
+[node name="lungs" type="TextureRect" parent="." unique_id=1245841557]
+visible = false
+layout_mode = 0
+offset_left = 559.0
+offset_top = 394.99997
+offset_right = 757.3165
+offset_bottom = 555.4127
+rotation = -0.1605703
+texture = ExtResource("3_cf0tt")
+expand_mode = 1
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

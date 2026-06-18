@@ -6,7 +6,7 @@ func _ready() -> void:
 	$Play.pressed.connect(_on_change_scene_requested.bind("res://Scenes/quiz.tscn"))
 	$Blind_Box.pressed.connect(_on_change_scene_requested.bind("res://Scenes/blind_box.tscn"))
 	$Credits.pressed.connect(_on_change_scene_requested.bind("res://Scenes/Credits.tscn"))
-
+	$How_to_play.pressed.connect(_on_change_scene_requested.bind("res://Scenes/HowToPlay.tscn"))
 
 func _on_change_scene_requested(target: String) -> void:
 	if target == "QUIT":

@@ -31,7 +31,7 @@ func _ready() -> void:
 	for b in question.get_children():
 		buttons.append(b)
 	load_quiz()
-	$Label.text = "Tokens: " + str(GlobalVariables.tokens)
+	$Label.text = "Cells: " + str(GlobalVariables.tokens)
 
 func load_quiz() -> void: 
 	print("Loading quiz! Current index: ", index, " Total questions: ", shuffled_collection.size())
