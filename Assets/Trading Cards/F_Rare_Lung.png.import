@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7rcli68cwffh"
-path="res://.godot/imported/B_Basic_Heart.png-5467aa0913cb7d0a64fa2f5577add429.ctex"
+uid="uid://cqankqn7gvtoj"
+path="res://.godot/imported/F_Rare_Lung.png-cc2aeeff2fa9c13be7e33f5827dde8c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trading Cards/B_Basic_Heart.png"
-dest_files=["res://.godot/imported/B_Basic_Heart.png-5467aa0913cb7d0a64fa2f5577add429.ctex"]
+source_file="res://Assets/Trading Cards/F_Rare_Lung.png"
+dest_files=["res://.godot/imported/F_Rare_Lung.png-cc2aeeff2fa9c13be7e33f5827dde8c2.ctex"]
 
 [params]
 

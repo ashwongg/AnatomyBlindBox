@@ -461,6 +461,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kb5bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5bp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5bp")
 }],
 "loop": false,
 "name": &"heart",
@@ -562,49 +574,49 @@ expand_mode = 1
 
 [node name="Menu" type="Button" parent="." unique_id=465074531]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 610.0
-offset_right = 226.0
-offset_bottom = 676.0
+offset_left = 110.0
+offset_top = 528.0
+offset_right = 355.0
+offset_bottom = 610.0
 theme_override_font_sizes/font_size = 42
 text = "Menu
 "
 
 [node name="Cards" type="Button" parent="." unique_id=2142603409]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 265.0
-offset_right = 361.0
-offset_bottom = 344.0
+offset_left = 110.0
+offset_top = 310.0
+offset_right = 355.0
+offset_bottom = 389.0
 theme_override_font_sizes/font_size = 42
 text = "Cards"
 
 [node name="OpenBox" type="Button" parent="." unique_id=2031713888]
 layout_mode = 0
-offset_left = 459.0
-offset_top = 266.0
-offset_right = 704.0
-offset_bottom = 345.0
+offset_left = 110.0
+offset_top = 210.0
+offset_right = 355.0
+offset_bottom = 289.0
 theme_override_font_sizes/font_size = 42
 text = "Open Box
 "
 
 [node name="visitSkelly" type="Button" parent="." unique_id=1893050321]
 layout_mode = 0
-offset_left = 805.0
-offset_top = 267.0
-offset_right = 1050.0
-offset_bottom = 346.0
+offset_left = 110.0
+offset_top = 409.0
+offset_right = 355.0
+offset_bottom = 488.0
 theme_override_font_sizes/font_size = 42
 text = "Visit Skelly
 "
 
 [node name="Label" type="Label" parent="." unique_id=679673964]
 layout_mode = 0
-offset_left = 477.0
-offset_top = 96.0
-offset_right = 659.0
-offset_bottom = 174.0
+offset_left = 110.0
+offset_top = 123.0
+offset_right = 292.0
+offset_bottom = 201.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "1"
@@ -612,8 +624,8 @@ text = "1"
 [node name="You_Got" type="Window" parent="." unique_id=446548509]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(300, 39)
-size = Vector2i(600, 500)
+size = Vector2i(2012, 885)
+visible = false
 borderless = true
 transparent = true
 
@@ -621,30 +633,29 @@ transparent = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 158.99998
-offset_top = -2.0
-offset_right = 65.66675
-offset_bottom = 352.6667
+offset_left = 200.0
+offset_top = 75.0
+offset_right = 188.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.75, 0.6)
+scale = Vector2(0.65, 0.65)
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 5
 
 [node name="OpenBox2" type="AnimationPlayer" parent="." unique_id=277996324]
-root_node = NodePath("")
 libraries/ = SubResource("AnimationLibrary_2b2wy")
 
 [node name="spr_HeartOpenBox" type="AnimatedSprite2D" parent="." unique_id=491815884]
 visible = false
-position = Vector2(599, 354)
+position = Vector2(792, 348)
 scale = Vector2(0.9615088, 0.92205304)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"heart"
 
 [node name="spr_PlaceholderOpenBox" type="AnimatedSprite2D" parent="." unique_id=2116231943]
 visible = false
-position = Vector2(577.8969, 339.5809)
+position = Vector2(775, 335)
 scale = Vector2(0.7669533, 0.75116414)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"placeholder"

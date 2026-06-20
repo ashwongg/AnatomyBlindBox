@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ed02uw2x3w1"
-path="res://.godot/imported/you_got_brain.png-5c235fc86471d0c3633d0d7bf4876fed.ctex"
+uid="uid://qhq6xdhu5kf6"
+path="res://.godot/imported/F_Rare_Stomach.png-ef64d67dab79c7a311fc63bb6a920d20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/You_Got/you_got_brain.png"
-dest_files=["res://.godot/imported/you_got_brain.png-5c235fc86471d0c3633d0d7bf4876fed.ctex"]
+source_file="res://Assets/Trading Cards/F_Rare_Stomach.png"
+dest_files=["res://.godot/imported/F_Rare_Stomach.png-ef64d67dab79c7a311fc63bb6a920d20.ctex"]
 
 [params]
 

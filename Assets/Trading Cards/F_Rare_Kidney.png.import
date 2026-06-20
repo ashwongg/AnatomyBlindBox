@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7713fyli7fjc"
-path="res://.godot/imported/you_got_stomach.png-99d41825ce2414f9d8ebe451eb54459e.ctex"
+uid="uid://b8vyhoaqftn7y"
+path="res://.godot/imported/F_Rare_Kidney.png-dcb880084369f02f82a3c5695c3fc412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/You_Got/you_got_stomach.png"
-dest_files=["res://.godot/imported/you_got_stomach.png-99d41825ce2414f9d8ebe451eb54459e.ctex"]
+source_file="res://Assets/Trading Cards/F_Rare_Kidney.png"
+dest_files=["res://.godot/imported/F_Rare_Kidney.png-dcb880084369f02f82a3c5695c3fc412.ctex"]
 
 [params]
 

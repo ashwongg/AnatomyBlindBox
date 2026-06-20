@@ -2,39 +2,36 @@ extends Control
 
 @onready var popup2 = $You_Got 
 @onready var openbox = $OpenBox
-#Placeholder
 @onready var placeholder_openbox = $spr_PlaceholderOpenBox
-#Open Box Animations
 @onready var heart_openbox = $spr_HeartOpenBox
-
 @onready var show_prize = $You_Got/show_prize
 
-#Images for Organs
-@onready var get_Heart = preload("res://Assets/Trading Cards/F_Basic_Heart.png")
-@onready var get_Brain = preload("res://Assets/Trading Cards/F_Basic_Brain.png")
-@onready var get_Kidney = preload("res://Assets/You_Got/you_got_kidney.png")
-@onready var get_Liver = preload("res://Assets/You_Got/you_got_liver.png")
-@onready var get_SmIntestine = preload("res://Assets/You_Got/you_got_small_intestine.png")
-@onready var get_LrgIntestine = preload("res://Assets/You_Got/you_got_large_intestine.png")
-@onready var get_Stomach = preload("res://Assets/You_Got/you_got_stomach.png")
-@onready var get_Lung = preload("res://Assets/You_Got/you_got_lungs.png")
-
-#Images for RARE Organs
-@onready var get_rare_Heart = preload("res://Assets/Trading Cards/F_Rare_Heart.png")
-@onready var get_rare_Brain = preload("res://Assets/Trading Cards/F_Rare_Brain.png")
-@onready var get_rare_Kidney = preload("res://Assets/You_Got/you_got_rare_kidneys.png")
-@onready var get_rare_Liver = preload("res://Assets/You_Got/you_got_rare_liver.png")
-@onready var get_rare_SmIntestine = preload("res://Assets/You_Got/you_got_rare_small_intestine.png")
-@onready var get_rare_LrgIntestine = preload("res://Assets/You_Got/you_got_rare_large_intestine.png")
-@onready var get_rare_Stomach = preload("res://Assets/You_Got/you_got_rare_stomach.png")
-@onready var get_rare_Lung = preload("res://Assets/You_Got/you_got_rare_lungs.png")
+# We can store the reward data cleanly in a Dictionary structure
+var rewards = {
+	1:  {"global_var": "has_brain", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png", "is_heart": false}, # Wait, your original code assigned get_Brain here but set_Heart texture? Double check your paths!
+	2:  {"global_var": "has_heart", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png", "is_heart": true},
+	3:  {"global_var": "has_kidneys", "texture": "res://Assets/Trading Cards/F_Basic_Kidney.png", "is_heart": false},
+	4:  {"global_var": "has_liver", "texture": "res://Assets/Trading Cards/F_Basic_Liver.png", "is_heart": false},
+	5:  {"global_var": "has_largeintestines", "texture": "res://Assets/Trading Cards/F_Basic_LargeIntestine.png", "is_heart": false},
+	6:  {"global_var": "has_smallintestines", "texture": "res://Assets/Trading Cards/F_Basic_SmallIntestines.png", "is_heart": false},
+	7:  {"global_var": "has_lungs", "texture": "res://Assets/Trading Cards/F_Basic_Lung.png", "is_heart": false},
+	8:  {"global_var": "has_stomach", "texture": "res://Assets/Trading Cards/F_Basic_Stomach.png", "is_heart": false},
+	# Rare Organs
+	9:  {"global_var": "has_rare_brain", "texture": "res://Assets/Trading Cards/F_Rare_Brain.png", "is_heart": false},
+	10: {"global_var": "has_rare_heart", "texture": "res://Assets/Trading Cards/F_Rare_Heart.png", "is_heart": false},
+	11: {"global_var": "has_rare_kidneys", "texture": "res://Assets/Trading Cards/F_Rare_Kidney.png", "is_heart": false},
+	12: {"global_var": "has_rare_liver", "texture": "res://Assets/Trading Cards/F_Rare_Liver.png", "is_heart": false},
+	13: {"global_var": "has_rare_largeintestines", "texture": "res://Assets/Trading Cards/F_Rare_LargeIntestine.png", "is_heart": false},
+	14: {"global_var": "has_rare_smallintestines", "texture": "res://Assets/Trading Cards/F_Rare_SmallIntestines.png", "is_heart": false},
+	15: {"global_var": "has_rare_lungs", "texture": "res://Assets/Trading Cards/F_Rare_Lung.png", "is_heart": false},
+	16: {"global_var": "has_rare_stomach", "texture": "res://Assets/Trading Cards/F_Rare_Stomach.png", "is_heart": false}
+}
 
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void: 
 	rng.randomize()
-	$Label.text = "Cells: " +str(GlobalVariables.tokens)
-	# Connect each button to the SAME function, but bind a unique string to each
+	$Label.text = "Cells: " + str(GlobalVariables.tokens)
 	$Menu.pressed.connect(_on_change_scene_requested.bind("res://Scenes/main.tscn"))
 	$Cards.pressed.connect(_on_change_scene_requested.bind("res://Scenes/TradingCard.tscn"))
 	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
@@ -44,161 +41,44 @@ func _on_change_scene_requested(target: String) -> void:
 	if target == "QUIT":
 		get_tree().quit()
 	else:
-		print("Switching to scene: ", target)
 		get_tree().change_scene_to_file(target)
 
 
 func _on_open_box_pressed() -> void:
-	if GlobalVariables.tokens > 0: 
-		GlobalVariables.tokens -= 1 
-		$Label.text = "Cells: " + str(GlobalVariables.tokens)
-		var random_blindbox = rng.randi_range(1, 4)
+	if GlobalVariables.tokens <= 0: 
+		return # Stop execution early if they don't have enough tokens
 		
-		match random_blindbox:
-			1:	
-				$spr_PlaceholderOpenBox.show()
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$spr_PlaceholderOpenBox.hide()
-				$You_Got.show()
-				GlobalVariables.has_brain = true 
-				show_prize.texture_normal = get_Brain
-			2:
-				$spr_HeartOpenBox.show()
-				heart_openbox.frame = 0 # Force the animation back to the start
-				heart_openbox.play()
-				await heart_openbox.animation_finished
-				print("animation finished")
-				$spr_HeartOpenBox.hide()
-				$You_Got.show()
-				GlobalVariables.has_heart = true 
-				show_prize.texture_normal = get_Heart
-			3:
-				$spr_PlaceholderOpenBox.show()
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				#temp
-				GlobalVariables.has_rare_heart = true 
-				show_prize.texture_normal = get_rare_Heart
-				$spr_PlaceholderOpenBox.hide()
-				#GlobalVariables.has_kidneys = true 
-				#show_prize.texture_normal = get_Kidney
-			4:
-				$spr_PlaceholderOpenBox.show()
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				#temp
-				GlobalVariables.has_rare_brain = true 
-				show_prize.texture_normal = get_rare_Brain
-				$spr_PlaceholderOpenBox.hide()
-				#GlobalVariables.has_liver = true 
-				#show_prize.texture_normal = get_Liver
-			5:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				GlobalVariables.has_largeintestines = true 
-				show_prize.texture_normal = get_LrgIntestine
-			6:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				GlobalVariables.has_smallintestines = true 
-				show_prize.texture_normal = get_SmIntestine
-			7:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				GlobalVariables.has_lungs = true 
-				show_prize.texture_normal = get_Lung
-			8:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_stomach = true 
-				show_prize.texture_normal = get_Stomach
-				
-			# Rare Organs
-			9:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()
-				GlobalVariables.has_rare_brain = true 
-				show_prize.texture_normal = get_rare_Brain
-			10:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_heart = true 
-				show_prize.texture_normal = get_rare_Heart
-			11:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_kidneys = true 
-				show_prize.texture_normal = get_rare_Kidney
-			12:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_liver = true 
-				show_prize.texture_normal = get_rare_Liver
-			13:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_largeintestines = true 
-				show_prize.texture_normal = get_rare_LrgIntestine
-			14:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_smallintestines = true 
-				show_prize.texture_normal = get_rare_SmIntestine
-			15:
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_lungs = true 
-				show_prize.texture_normal = get_Lung
-			_: # The underscore acts as the 'else' (default) case
-				placeholder_openbox.frame = 0 # Force the animation back to the start
-				placeholder_openbox.play()
-				await placeholder_openbox.animation_finished
-				print("animation finished")
-				$You_Got.show()				
-				GlobalVariables.has_rare_stomach = true 
-				show_prize.texture_normal = get_rare_Stomach
+	GlobalVariables.tokens -= 1 
+	$Label.text = "Cells: " + str(GlobalVariables.tokens)
 	
+	var roll = rng.randi_range(1, 16)
+	var prize_data = rewards[roll]
+	
+	# Determine which sprite node to play based on the reward data
+	var active_anim = heart_openbox if prize_data["is_heart"] else placeholder_openbox
+	
+	# Safeguard: Ensure the animations start clean
+	placeholder_openbox.hide()
+	heart_openbox.hide()
+	
+	active_anim.show()
+	active_anim.stop() # Reset the animation player state completely
+	active_anim.frame = 0 
+	active_anim.play()
+	
+	# Wait for animation to finish
+	await active_anim.animation_finished
+	await get_tree().create_timer(1.0).timeout
+	
+	active_anim.hide()
+	
+	# Dynamically set the Global variable flag using set()
+	GlobalVariables.set(prize_data["global_var"], true)
+	
+	# Load and apply texture dynamically
+	show_prize.texture_normal = load(prize_data["texture"])
+	$You_Got.show()
+
+
 func _on_show_prize_pressed() -> void:
 	popup2.hide()

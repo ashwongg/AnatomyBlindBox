@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cai7xm3a0734o"
-path="res://.godot/imported/B_Basic_Lung.png-ca7b7358f9160536a5b0b13f970e8b91.ctex"
+uid="uid://5qpkufwrgla1"
+path="res://.godot/imported/F_Rare_SmallIntestines.png-7bb4fc8572de0b8151b1edd15f6b7e7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Trading Cards/B_Basic_Lung.png"
-dest_files=["res://.godot/imported/B_Basic_Lung.png-ca7b7358f9160536a5b0b13f970e8b91.ctex"]
+source_file="res://Assets/Trading Cards/F_Rare_SmallIntestines.png"
+dest_files=["res://.godot/imported/F_Rare_SmallIntestines.png-7bb4fc8572de0b8151b1edd15f6b7e7c.ctex"]
 
 [params]
 
