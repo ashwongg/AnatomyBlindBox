@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxa5ewtgc87o4"
-path="res://.godot/imported/boxOpen_placeholder_sprite.png-b9c377060c450142ffe0e8aac7826199.ctex"
+uid="uid://bikqwtwi62xsd"
+path="res://.godot/imported/BoxOpening_brain_rare_BMVC_SS.png-215c33080a01447f24e196d37b6b11f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/boxOpen_placeholder_sprite.png"
-dest_files=["res://.godot/imported/boxOpen_placeholder_sprite.png-b9c377060c450142ffe0e8aac7826199.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_brain_rare_BMVC_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_brain_rare_BMVC_SS.png-215c33080a01447f24e196d37b6b11f0.ctex"]
 
 [params]
 
