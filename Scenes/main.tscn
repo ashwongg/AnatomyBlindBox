@@ -28,9 +28,9 @@ expand_mode = 1
 [node name="Play" type="Button" parent="." unique_id=295055985]
 layout_mode = 0
 offset_left = 650.0
-offset_top = 239.0
+offset_top = 232.0
 offset_right = 909.0
-offset_bottom = 331.0
+offset_bottom = 330.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_kry3j")
 flat = true
@@ -38,29 +38,29 @@ flat = true
 [node name="Blind_Box" type="Button" parent="." unique_id=902894250]
 layout_mode = 0
 offset_left = 650.0
-offset_top = 361.0
+offset_top = 384.0
 offset_right = 911.0
-offset_bottom = 451.0
+offset_bottom = 474.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("4_21xkr")
 flat = true
 
 [node name="Credits" type="Button" parent="." unique_id=530322934]
 layout_mode = 0
-offset_left = 936.0
-offset_top = 358.0
-offset_right = 1197.0
-offset_bottom = 448.0
+offset_left = 925.0
+offset_top = 384.0
+offset_right = 1186.0
+offset_bottom = 474.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("5_6bp64")
 flat = true
 
 [node name="How_to_play" type="Button" parent="." unique_id=384361608]
 layout_mode = 0
-offset_left = 938.0
-offset_top = 238.0
-offset_right = 1199.0
-offset_bottom = 336.0
+offset_left = 925.0
+offset_top = 232.0
+offset_right = 1186.0
+offset_bottom = 330.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("6_21xkr")
 flat = true
@@ -75,8 +75,3 @@ offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "1"
-
-[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
-[connection signal="pressed" from="Blind_Box" to="Blind_Box" method="_on_pressed"]
-[connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]
-[connection signal="pressed" from="How_to_play" to="." method="_on_how_to_play_pressed"]

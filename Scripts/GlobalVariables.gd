@@ -1,6 +1,6 @@
 extends Node
 
-var toggle = true 
+var toggle = false 
 
 var tokens = 100
 

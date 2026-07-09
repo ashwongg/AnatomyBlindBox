@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bjrkgwx74p8er"]
+[gd_resource type="Resource" format=3 uid="uid://bjrkgwx74p8er"]
 
 [ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_b75nv"]
 
 [resource]
 script = ExtResource("1_b75nv")
-question_info = "Skeletons are made of ___?"
+question_info = "Skeletons are made of ___?
+"
 options = Array[String](["Bones", "Blood", "Organs", "Skin"])
-correct = "Bones"
+correct = "Circulatory"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

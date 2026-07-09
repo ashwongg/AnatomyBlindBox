@@ -1,0 +1,10 @@
+[gd_resource type="Resource" format=3 uid="uid://bevcbs5ndcc6b"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_ct7la"]
+
+[resource]
+script = ExtResource("1_ct7la")
+question_info = "Which organ allows you to breathe? "
+options = Array[String](["Kidney", "Stomach", "Lungs", "Small Intestines"])
+correct = "Lungs"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

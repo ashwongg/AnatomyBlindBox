@@ -1,0 +1,11 @@
+[gd_resource type="Resource" format=3 uid="uid://bdfq662rpgi5m"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_ukhu6"]
+
+[resource]
+script = ExtResource("1_ukhu6")
+question_info = "What is the biggest bone in your body? 
+"
+options = Array[String](["Tibia", "Ulnar", "Femur", "Sternum"])
+correct = "Femur"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

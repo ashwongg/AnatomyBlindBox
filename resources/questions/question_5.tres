@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cux6cv16gh24"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_bmlec"]
+[ext_resource type="Texture2D" uid="uid://dk1eoypapfyt4" path="res://Assets/organ characters/liver.png" id="1_rrn1e"]
+
+[resource]
+script = ExtResource("1_bmlec")
+question_info = "Which system does the liver belong to? 
+"
+question_image = ExtResource("1_rrn1e")
+options = Array[String](["Nervous", "Digestive", "Urinary", "Respiratory"])
+correct = "Digestive"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

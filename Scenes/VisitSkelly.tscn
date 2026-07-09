@@ -3,7 +3,16 @@
 [ext_resource type="Script" uid="uid://be45dur80cfu8" path="res://Scripts/visit_skelly.gd" id="1_ivyyr"]
 [ext_resource type="Texture2D" uid="uid://bc56ofxsxwpvp" path="res://Assets/visit_skelly.png" id="2_hyles"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_by7u1"]
-[ext_resource type="Texture2D" uid="uid://dtij5qf5wgpny" path="res://Assets/Skelly Organs/lungs.png" id="3_cf0tt"]
+[ext_resource type="Texture2D" uid="uid://e8cujwa1nkgl" path="res://Assets/organ characters/lungs.png" id="4_m626k"]
+[ext_resource type="Texture2D" uid="uid://scengs5hed7d" path="res://Assets/organ characters/heart.png" id="5_ojfnw"]
+[ext_resource type="Texture2D" uid="uid://dy7k7nh10cure" path="res://Assets/organ characters/large intestine.png" id="6_3j4rl"]
+[ext_resource type="Texture2D" uid="uid://sefl0xxoig3q" path="res://Assets/organ characters/small intestine.png" id="7_t1k07"]
+[ext_resource type="Texture2D" uid="uid://dk1eoypapfyt4" path="res://Assets/organ characters/liver.png" id="8_beb5f"]
+[ext_resource type="Texture2D" uid="uid://o38o5unjkmql" path="res://Assets/organ characters/R_kidneys.png" id="8_t1k07"]
+[ext_resource type="Texture2D" uid="uid://coqwpd5ii8lpk" path="res://Assets/organ characters/brain.png" id="9_4xe5t"]
+[ext_resource type="Texture2D" uid="uid://bhtygxtk5jn3p" path="res://Assets/organ characters/stomach.png" id="10_r23g8"]
+[ext_resource type="Texture2D" uid="uid://b8c32bn6ygdx" path="res://Assets/organ characters/L_kidneys.png" id="11_beb5f"]
+[ext_resource type="Texture2D" uid="uid://cexbrklfk0o62" path="res://Assets/rib_cage.png" id="13_4xe5t"]
 
 [node name="VisitSkelly" type="Control" unique_id=2126481693]
 layout_mode = 3
@@ -33,15 +42,115 @@ theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_by7u1")
 flat = true
 
+[node name="brain" type="TextureRect" parent="." unique_id=1685826049]
+visible = false
+layout_mode = 0
+offset_left = 470.0
+offset_top = 48.999992
+offset_right = 682.70337
+offset_bottom = 189.29459
+rotation = -0.1605703
+texture = ExtResource("9_4xe5t")
+expand_mode = 1
+
 [node name="lungs" type="TextureRect" parent="." unique_id=1245841557]
 visible = false
 layout_mode = 0
-offset_left = 559.0
-offset_top = 394.99997
-offset_right = 757.3165
-offset_bottom = 555.4127
+offset_left = 524.0
+offset_top = 364.00003
+offset_right = 751.1657
+offset_bottom = 556.5258
 rotation = -0.1605703
-texture = ExtResource("3_cf0tt")
+texture = ExtResource("4_m626k")
+expand_mode = 1
+
+[node name="large intestine" type="TextureRect" parent="." unique_id=1410360391]
+visible = false
+layout_mode = 0
+offset_left = 573.0
+offset_top = 527.99994
+offset_right = 759.61456
+offset_bottom = 686.8117
+rotation = -0.1605703
+texture = ExtResource("6_3j4rl")
+expand_mode = 1
+
+[node name="small intestine" type="TextureRect" parent="." unique_id=31533826]
+visible = false
+layout_mode = 0
+offset_left = 610.99994
+offset_top = 548.99994
+offset_right = 720.2429
+offset_bottom = 638.5422
+rotation = -0.1605703
+texture = ExtResource("7_t1k07")
+expand_mode = 1
+
+[node name="R_Kidney" type="TextureRect" parent="." unique_id=1891633243]
+visible = false
+layout_mode = 0
+offset_left = 726.0
+offset_top = 490.0
+offset_right = 808.25275
+offset_bottom = 619.048
+rotation = -0.1605703
+texture = ExtResource("8_t1k07")
+expand_mode = 1
+
+[node name="stomach" type="TextureRect" parent="." unique_id=835656792]
+visible = false
+layout_mode = 0
+offset_left = 620.0
+offset_top = 470.99994
+offset_right = 725.94763
+offset_bottom = 554.8722
+rotation = -0.1605703
+texture = ExtResource("10_r23g8")
+expand_mode = 1
+
+[node name="liver" type="TextureRect" parent="." unique_id=1481517733]
+visible = false
+layout_mode = 0
+offset_left = 609.99994
+offset_top = 534.99994
+offset_right = 727.37103
+offset_bottom = 613.5272
+rotation = -0.1605703
+texture = ExtResource("8_beb5f")
+expand_mode = 1
+
+[node name="L_Kidney" type="TextureRect" parent="." unique_id=1807659487]
+visible = false
+layout_mode = 0
+offset_left = 527.0
+offset_top = 530.99994
+offset_right = 608.49005
+offset_bottom = 668.56396
+rotation = -0.1605703
+texture = ExtResource("11_beb5f")
+expand_mode = 1
+
+[node name="heart" type="TextureRect" parent="." unique_id=1541052957]
+visible = false
+layout_mode = 0
+offset_left = 601.0
+offset_top = 395.99997
+offset_right = 688.7479
+offset_bottom = 491.06577
+rotation = -0.1605703
+texture = ExtResource("5_ojfnw")
+expand_mode = 1
+
+[node name="rib cage" type="TextureRect" parent="." unique_id=1146221653]
+layout_mode = 0
+offset_left = 500.1902
+offset_top = 343.3536
+offset_right = 844.8939
+offset_bottom = 630.71454
+rotation = -0.027925268
+texture = ExtResource("13_4xe5t")
 expand_mode = 1
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="mouse_entered" from="rib cage" to="." method="_on_rib_cage_focus_entered"]
+[connection signal="mouse_exited" from="rib cage" to="." method="_on_rib_cage_focus_exited"]

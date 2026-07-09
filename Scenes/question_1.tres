@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://11qni72cnx4w"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_etm6x"]
+
+[resource]
+script = ExtResource("1_etm6x")
+question_info = "What is the biggest organ of the body?"
+options = Array[String](["Heart", "Brain", "Skin", "Stomach"])
+correct = "Skin"
+metadata/_custom_type_script = "uid://0h3w8u20208c"
