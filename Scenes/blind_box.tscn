@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://brkfrfkbmfk76" path="res://Assets/SpriteSheets/BoxOpening_stomach_basic_SS.png" id="17_u20h4"]
 [ext_resource type="Texture2D" uid="uid://dy5768rvrt4l1" path="res://Assets/SpriteSheets/BoxOpening_stomach_rare_SS.png" id="18_imanq"]
 [ext_resource type="Texture2D" uid="uid://ir2dfwif16d3" path="res://Assets/SpriteSheets/boxOpen_placeholder_sprite.png" id="19_36rv1"]
+[ext_resource type="Texture2D" uid="uid://c3gj4alyqu0tg" path="res://Assets/cell.png" id="21_eq7k5"]
 
 [sub_resource type="Animation" id="Animation_fsl4q"]
 resource_name = "openbox"
@@ -8504,23 +8505,23 @@ text = "Visit Skelly
 
 [node name="Label" type="Label" parent="." unique_id=679673964]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 123.0
-offset_right = 292.0
-offset_bottom = 201.0
+offset_left = 200.0
+offset_top = 99.0
+offset_right = 382.0
+offset_bottom = 177.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 50
 text = "1"
 
 [node name="Click to Open" type="Label" parent="." unique_id=1868740770]
 layout_mode = 0
-offset_left = 598.0
-offset_top = 75.0
-offset_right = 999.0
-offset_bottom = 158.0
+offset_left = 499.0
+offset_top = 117.0
+offset_right = 1157.0
+offset_bottom = 200.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
-text = "Click to Open!"
+text = "Click The Box To Open!"
 
 [node name="You_Got" type="Window" parent="." unique_id=446548509]
 transparent_bg = true
@@ -8664,7 +8665,16 @@ visible = false
 position = Vector2(775, 335)
 scale = Vector2(0.7669533, 0.75116414)
 sprite_frames = SubResource("SpriteFrames_icw4g")
-animation = &"placeholder"
+animation = &"is_lungs_basic"
+
+[node name="Cell" type="TextureRect" parent="." unique_id=1968947927]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 26.0
+offset_right = 261.0
+offset_bottom = 251.0
+texture = ExtResource("21_eq7k5")
+expand_mode = 1
 
 [connection signal="pressed" from="Menu" to="Menu" method="_on_pressed"]
 [connection signal="pressed" from="Cards" to="Cards" method="_on_pressed"]

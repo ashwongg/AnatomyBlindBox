@@ -4,7 +4,6 @@
 [ext_resource type="Resource" uid="uid://dw6d0o8agcdi3" path="res://resources/question_collection/question_collection_1.tres" id="2_i0i4q"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_bu0r6"]
 [ext_resource type="Texture2D" uid="uid://cb5eho4yb3nuo" path="res://Assets/Quiz Button.png" id="3_fdxuh"]
-[ext_resource type="Texture2D" uid="uid://c3gj4alyqu0tg" path="res://Assets/cell.png" id="3_pkwmv"]
 
 [sub_resource type="GDScript" id="GDScript_y1tew"]
 script/source = "extends Node2D 
@@ -145,21 +144,13 @@ texture = ExtResource("1_kninm")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=741956553]
-offset_left = 1093.0
-offset_top = 116.0
-offset_right = 1296.0
-offset_bottom = 175.0
+offset_left = 1029.0
+offset_top = 124.0
+offset_right = 1232.0
+offset_bottom = 183.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "1"
-
-[node name="Cell" type="TextureRect" parent="." unique_id=857798995]
-offset_left = 994.0
-offset_top = 85.0
-offset_right = 1119.0
-offset_bottom = 210.0
-texture = ExtResource("3_pkwmv")
-expand_mode = 1
+theme_override_font_sizes/font_size = 31
+text = "Cells : 1"
 
 [node name="Back" type="Button" parent="." unique_id=1719676113]
 offset_left = 494.0

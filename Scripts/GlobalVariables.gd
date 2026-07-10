@@ -21,3 +21,5 @@ var has_rare_lungs = toggle
 var has_rare_kidneys = toggle
 var has_rare_smallintestines = toggle  
 var has_rare_largeintestines = toggle 
+
+var all_common_organs_collected = false 

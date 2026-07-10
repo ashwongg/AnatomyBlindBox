@@ -34,10 +34,10 @@ texture = ExtResource("2_hyles")
 
 [node name="Back" type="Button" parent="." unique_id=1547266867]
 layout_mode = 0
-offset_left = 1029.0
-offset_top = 641.0
-offset_right = 1290.0
-offset_bottom = 731.0
+offset_left = 1021.0
+offset_top = 625.0
+offset_right = 1282.0
+offset_bottom = 715.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_by7u1")
 flat = true
@@ -142,12 +142,12 @@ texture = ExtResource("5_ojfnw")
 expand_mode = 1
 
 [node name="rib cage" type="TextureRect" parent="." unique_id=1146221653]
+self_modulate = Color(1, 1, 1, 0.6901961)
 layout_mode = 0
-offset_left = 500.1902
-offset_top = 343.3536
-offset_right = 844.8939
-offset_bottom = 630.71454
-rotation = -0.027925268
+offset_left = 507.0
+offset_top = 342.0
+offset_right = 844.62274
+offset_bottom = 624.39075
 texture = ExtResource("13_4xe5t")
 expand_mode = 1
 
