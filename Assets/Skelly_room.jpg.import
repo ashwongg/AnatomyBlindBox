@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc56ofxsxwpvp"
-valid=false
+uid="uid://7a5mepod8cfk"
+path="res://.godot/imported/Skelly_room.jpg-d018993857f0a0dad6e381c110d372cd.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/visit_skelly.png"
+source_file="res://Assets/Skelly_room.jpg"
+dest_files=["res://.godot/imported/Skelly_room.jpg-d018993857f0a0dad6e381c110d372cd.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crc0kumqiswyx"]
 
 [ext_resource type="Script" uid="uid://be45dur80cfu8" path="res://Scripts/visit_skelly.gd" id="1_ivyyr"]
-[ext_resource type="Texture2D" uid="uid://bc56ofxsxwpvp" path="res://Assets/visit_skelly.png" id="2_hyles"]
+[ext_resource type="Texture2D" uid="uid://dwkgt00ncgtbn" path="res://Assets/Skelly_room.png" id="2_t1k07"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_by7u1"]
 [ext_resource type="Texture2D" uid="uid://e8cujwa1nkgl" path="res://Assets/organ characters/lungs.png" id="4_m626k"]
 [ext_resource type="Texture2D" uid="uid://scengs5hed7d" path="res://Assets/organ characters/heart.png" id="5_ojfnw"]
@@ -30,124 +30,117 @@ offset_top = -6.999939
 offset_right = 1671.9337
 offset_bottom = 1113.4309
 scale = Vector2(0.7673334, 0.64975)
-texture = ExtResource("2_hyles")
+texture = ExtResource("2_t1k07")
+expand_mode = 1
 
 [node name="Back" type="Button" parent="." unique_id=1547266867]
 layout_mode = 0
-offset_left = 1021.0
-offset_top = 625.0
-offset_right = 1282.0
-offset_bottom = 715.0
+offset_left = 952.0
+offset_top = 527.0
+offset_right = 1213.0
+offset_bottom = 617.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_by7u1")
 flat = true
 
 [node name="brain" type="TextureRect" parent="." unique_id=1685826049]
-visible = false
 layout_mode = 0
-offset_left = 470.0
-offset_top = 48.999992
-offset_right = 682.70337
-offset_bottom = 189.29459
-rotation = -0.1605703
+offset_left = 415.00003
+offset_top = 39.0
+offset_right = 627.70337
+offset_bottom = 179.29459
+scale = Vector2(0.945, 0.945)
 texture = ExtResource("9_4xe5t")
 expand_mode = 1
 
 [node name="lungs" type="TextureRect" parent="." unique_id=1245841557]
-visible = false
 layout_mode = 0
-offset_left = 524.0
-offset_top = 364.00003
-offset_right = 751.1657
-offset_bottom = 556.5258
-rotation = -0.1605703
+offset_left = 426.0
+offset_top = 349.0
+offset_right = 653.16565
+offset_bottom = 541.52576
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_m626k")
 expand_mode = 1
 
-[node name="large intestine" type="TextureRect" parent="." unique_id=1410360391]
-visible = false
-layout_mode = 0
-offset_left = 573.0
-offset_top = 527.99994
-offset_right = 759.61456
-offset_bottom = 686.8117
-rotation = -0.1605703
-texture = ExtResource("6_3j4rl")
-expand_mode = 1
-
-[node name="small intestine" type="TextureRect" parent="." unique_id=31533826]
-visible = false
-layout_mode = 0
-offset_left = 610.99994
-offset_top = 548.99994
-offset_right = 720.2429
-offset_bottom = 638.5422
-rotation = -0.1605703
-texture = ExtResource("7_t1k07")
-expand_mode = 1
-
 [node name="R_Kidney" type="TextureRect" parent="." unique_id=1891633243]
-visible = false
 layout_mode = 0
-offset_left = 726.0
-offset_top = 490.0
-offset_right = 808.25275
-offset_bottom = 619.048
-rotation = -0.1605703
+offset_left = 548.0
+offset_top = 507.00003
+offset_right = 630.25275
+offset_bottom = 636.048
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_t1k07")
 expand_mode = 1
 
-[node name="stomach" type="TextureRect" parent="." unique_id=835656792]
-visible = false
-layout_mode = 0
-offset_left = 620.0
-offset_top = 470.99994
-offset_right = 725.94763
-offset_bottom = 554.8722
-rotation = -0.1605703
-texture = ExtResource("10_r23g8")
-expand_mode = 1
-
-[node name="liver" type="TextureRect" parent="." unique_id=1481517733]
-visible = false
-layout_mode = 0
-offset_left = 609.99994
-offset_top = 534.99994
-offset_right = 727.37103
-offset_bottom = 613.5272
-rotation = -0.1605703
-texture = ExtResource("8_beb5f")
-expand_mode = 1
-
 [node name="L_Kidney" type="TextureRect" parent="." unique_id=1807659487]
-visible = false
 layout_mode = 0
-offset_left = 527.0
-offset_top = 530.99994
-offset_right = 608.49005
-offset_bottom = 668.56396
-rotation = -0.1605703
+offset_left = 434.00003
+offset_top = 515.0
+offset_right = 515.4901
+offset_bottom = 652.564
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("11_beb5f")
 expand_mode = 1
 
-[node name="heart" type="TextureRect" parent="." unique_id=1541052957]
-visible = false
+[node name="liver" type="TextureRect" parent="." unique_id=1481517733]
 layout_mode = 0
-offset_left = 601.0
-offset_top = 395.99997
-offset_right = 688.7479
-offset_bottom = 491.06577
-rotation = -0.1605703
+offset_left = 437.0
+offset_top = 466.0
+offset_right = 554.3711
+offset_bottom = 544.5273
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_beb5f")
+expand_mode = 1
+
+[node name="small intestine" type="TextureRect" parent="." unique_id=31533826]
+layout_mode = 0
+offset_left = 469.99997
+offset_top = 504.0
+offset_right = 579.243
+offset_bottom = 593.54224
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_t1k07")
+expand_mode = 1
+
+[node name="large intestine" type="TextureRect" parent="." unique_id=1410360391]
+layout_mode = 0
+offset_left = 454.99997
+offset_top = 496.0
+offset_right = 641.6145
+offset_bottom = 654.81177
+scale = Vector2(0.65, 0.7)
+texture = ExtResource("6_3j4rl")
+expand_mode = 1
+
+[node name="stomach" type="TextureRect" parent="." unique_id=835656792]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 439.0
+offset_right = 584.94763
+offset_bottom = 522.87225
+scale = Vector2(0.8, 1)
+texture = ExtResource("10_r23g8")
+expand_mode = 1
+
+[node name="heart" type="TextureRect" parent="." unique_id=1541052957]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 402.0
+offset_right = 566.7479
+offset_bottom = 497.0658
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_ojfnw")
 expand_mode = 1
 
 [node name="rib cage" type="TextureRect" parent="." unique_id=1146221653]
+visible = false
 self_modulate = Color(1, 1, 1, 0.6901961)
 layout_mode = 0
-offset_left = 507.0
-offset_top = 342.0
-offset_right = 844.62274
-offset_bottom = 624.39075
+offset_left = 392.0
+offset_top = 355.0
+offset_right = 635.0
+offset_bottom = 605.0
 texture = ExtResource("13_4xe5t")
 expand_mode = 1
 

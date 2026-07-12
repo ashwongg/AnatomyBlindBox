@@ -8665,7 +8665,7 @@ visible = false
 position = Vector2(775, 335)
 scale = Vector2(0.7669533, 0.75116414)
 sprite_frames = SubResource("SpriteFrames_icw4g")
-animation = &"is_lungs_basic"
+animation = &"placeholder"
 
 [node name="Cell" type="TextureRect" parent="." unique_id=1968947927]
 layout_mode = 0

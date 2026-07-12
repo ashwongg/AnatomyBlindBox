@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc56ofxsxwpvp"
-valid=false
+uid="uid://bler0w888d6wl"
+path="res://.godot/imported/itch.png-e60a838b7a96018ee29f18ac9adc854d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/visit_skelly.png"
+source_file="res://Assets/itch.png"
+dest_files=["res://.godot/imported/itch.png-e60a838b7a96018ee29f18ac9adc854d.ctex"]
 
 [params]
 

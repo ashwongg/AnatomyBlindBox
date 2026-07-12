@@ -1,10 +1,13 @@
-[gd_resource type="Resource" format=3 uid="uid://bevcbs5ndcc6b"]
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bevcbs5ndcc6b"]
 
-[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_ct7la"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_ct7la"]
+[ext_resource type="Texture2D" uid="uid://dtij5qf5wgpny" path="res://Assets/Skelly Organs/lungs.png" id="1_wsmvh"]
 
 [resource]
 script = ExtResource("1_ct7la")
 question_info = "Which organ allows you to breathe? "
+type = 1
+question_image = ExtResource("1_wsmvh")
 options = Array[String](["Kidney", "Stomach", "Lungs", "Small Intestines"])
 correct = "Lungs"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

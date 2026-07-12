@@ -4,7 +4,6 @@ extends Node2D
 @export var color_right : Color
 @export var color_wrong : Color 
 
-# CHANGED: Separate your clickable buttons from your text labels
 var buttons : Array[Button] = []
 var labels : Array[Label] = []
 
@@ -13,13 +12,13 @@ var correct: int
 
 @onready var label_question: Label = $Control/Label_Question
 @onready var question: Node2D = $Control/Question
+@onready var backbtn: Button = $Back
 @onready var image: TextureRect = $Control/Image
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
 var shuffled_collection: Array = []
 
 func _ready() -> void: 
-	
 	if quiz_c == null:
 		push_error("CRITICAL: You forgot to assign a Question_collection resource to quiz_c in the Inspector!")
 		return
@@ -27,37 +26,44 @@ func _ready() -> void:
 	shuffled_collection = quiz_c.collection.duplicate()
 	shuffled_collection.shuffle()
 	
-	# CHANGED: Grabs the button nodes AND their child Label nodes
+	# Grabs the button nodes AND their child Label nodes
 	for b in question.get_children():
 		if b is Button:
 			buttons.append(b)
-			# Assumes the Label is the first child node inside your Button
+			# FIX: Connect the answer button permanently ONCE right here.
+			# We pass the index 'i' implicitly by finding it in the array later,
+			# or we can just pass the button object itself!
+			b.pressed.connect(button_answer.bind(b))
+			
 			var child_label = b.get_child(0) as Label
 			if child_label:
 				labels.append(child_label)
 			else:
 				push_error("Missing child Label inside button: ", b.name)
 	
-	load_quiz()
 	$Label.text = " : " + str(GlobalVariables.tokens)
+	
+	# Connect your back button ONCE right here
+	$Back.pressed.connect(_on_change_scene_requested.bind("res://Scenes/blind_box.tscn"))
+	
+	load_quiz()
+
 
 func load_quiz() -> void: 
 	var custom_font = load("res://resources/fonts/CarbonBold W00 Regular.ttf")
-	print("Loading quiz! Current index: ", index, " Total questions: ", shuffled_collection.size())
+	
 	if index >= shuffled_collection.size():
 		load_menu()
 		return
 		
 	label_question.text = shuffled_collection[index].question_info
-	
 	var option = shuffled_collection[index].options
 	
-	# CHANGED: Populate option text into labels array, but connect listeners to buttons array
+	# FIX: Only update text and styles here. DO NOT CONNECT SIGNALS HERE.
 	for i in buttons.size(): 
-		labels[i].text = option[i] # Text goes into the inner Label
+		labels[i].text = option[i] 
 		labels[i].add_theme_font_size_override("font_size", 200) 
 		labels[i].add_theme_font_override("font", custom_font) 
-		buttons[i].pressed.connect(button_answer.bind(buttons[i])) # Click logic stays on the Button
 		
 	match shuffled_collection[index].type: 
 		question_type.question_Type.text: 
@@ -65,14 +71,14 @@ func load_quiz() -> void:
 		question_type.question_Type.image: 
 			image.texture = shuffled_collection[index].question_image
 			
-func button_answer(button) -> void: 
+func button_answer(button: Button) -> void: 
 	for bt in buttons:
 		bt.disabled = true
 
-	if shuffled_collection[index].correct == button.get_child(0).text: # CHANGED: Checks label text instead of button text
+	if shuffled_collection[index].correct == button.get_child(0).text: 
 		button.modulate = color_right 
 		GlobalVariables.tokens += 1
-		$Label.text = "Tokens: " + str(GlobalVariables.tokens)
+		$Label.text = " : " + str(GlobalVariables.tokens)
 	else: 
 		button.modulate = color_wrong
 	
@@ -84,18 +90,23 @@ func load_next_question() -> void:
 	for bt in buttons:
 		bt.modulate = Color.WHITE
 		bt.disabled = false 
-		if bt.pressed.is_connected(button_answer):
-			bt.pressed.disconnect(button_answer)
 	
 	index += 1 
 	load_quiz()
 
 func select_panel(panel: Panel) -> void: 
 	for p in $Control/Panel_holder.get_children():
-		if p==panel: 
+		if p == panel: 
 			p.show() 
 		else: 
 			p.hide()
 		
 func load_menu() -> void: 
 	get_tree().change_scene_to_file("res://Scenes/blind_box.tscn")
+	
+func _on_change_scene_requested(target: String) -> void:
+	if target == "QUIT":
+		get_tree().quit()
+	else:
+		print("Switching to scene: ", target)
+		get_tree().change_scene_to_file(target)

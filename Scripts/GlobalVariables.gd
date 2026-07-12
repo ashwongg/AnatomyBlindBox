@@ -2,7 +2,7 @@ extends Node
 
 var toggle = false 
 
-var tokens = 100
+var tokens = 10
 
 var has_heart = toggle
 var has_liver = toggle 
@@ -23,3 +23,5 @@ var has_rare_smallintestines = toggle
 var has_rare_largeintestines = toggle 
 
 var all_common_organs_collected = false 
+
+var played_intro_cutscene = false 

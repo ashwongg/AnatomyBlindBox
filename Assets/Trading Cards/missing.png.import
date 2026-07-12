@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc56ofxsxwpvp"
-valid=false
+uid="uid://ctboygvbviybk"
+path="res://.godot/imported/missing.png-8cb0f92afcd068de9e3c15c0b5305982.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/visit_skelly.png"
+source_file="res://Assets/Trading Cards/missing.png"
+dest_files=["res://.godot/imported/missing.png-8cb0f92afcd068de9e3c15c0b5305982.ctex"]
 
 [params]
 
