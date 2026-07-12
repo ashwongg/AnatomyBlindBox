@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtij5qf5wgpny"
-path="res://.godot/imported/lungs.png-8118130be92b5ba2ee8580f4fcfff8fc.ctex"
+uid="uid://dcxeaumbwoyvj"
+path="res://.godot/imported/Liver.png-4fc18e7fe0691f673881606f663e3eb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Skelly Organs/lungs.png"
-dest_files=["res://.godot/imported/lungs.png-8118130be92b5ba2ee8580f4fcfff8fc.ctex"]
+source_file="res://Assets/Questions_images/Liver.png"
+dest_files=["res://.godot/imported/Liver.png-4fc18e7fe0691f673881606f663e3eb7.ctex"]
 
 [params]
 

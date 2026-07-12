@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bldurtvv4ef8t"]
+[gd_scene format=3 uid="uid://cxgccfocq1ycs"]
 
-[ext_resource type="Script" uid="uid://o5vptmvu1h6m" path="res://Scripts/intro_video.gd" id="1_jsyq0"]
-[ext_resource type="VideoStream" uid="uid://dol56637i8mxm" path="res://Assets/Intro Video/intro_movie_draft (2).ogv" id="2_jsyq0"]
+[ext_resource type="Script" uid="uid://cvs08j1kmgs45" path="res://Scripts/closing_video.gd" id="1_7xe0l"]
+[ext_resource type="VideoStream" uid="uid://cp41ih7c8sdlp" path="res://Assets/Intro Video/closing_movie_draft.ogv" id="2_7xe0l"]
 
-[node name="IntroVideo" type="Control" unique_id=486546096]
+[node name="ClosingVideo" type="Control" unique_id=486546096]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jsyq0")
+script = ExtResource("1_7xe0l")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=653261728]
 layout_mode = 1
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_jsyq0")
+stream = ExtResource("2_7xe0l")
 autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -5,7 +5,7 @@ extends Control
 # 2. These variables hold your nodes. 
 
 func _on_rib_cage_focus_entered() -> void:
-	$"rib cage".self_modulate.a = 0.1
+	$"rib cage".self_modulate.a = 0
 
 
 func _on_rib_cage_focus_exited() -> void:

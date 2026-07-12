@@ -22,6 +22,7 @@ var has_rare_kidneys = toggle
 var has_rare_smallintestines = toggle  
 var has_rare_largeintestines = toggle 
 
-var all_common_organs_collected = false 
+var all_common_organs_collected = true 
 
 var played_intro_cutscene = false 
+var played_ending_cutscene = false 

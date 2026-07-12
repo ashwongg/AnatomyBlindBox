@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bevcbs5ndcc6b"]
 
 [ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_ct7la"]
-[ext_resource type="Texture2D" uid="uid://dtij5qf5wgpny" path="res://Assets/Skelly Organs/lungs.png" id="1_wsmvh"]
+[ext_resource type="Texture2D" uid="uid://bto7na371yvif" path="res://Assets/Questions_images/lungs.png" id="1_wsmvh"]
 
 [resource]
 script = ExtResource("1_ct7la")

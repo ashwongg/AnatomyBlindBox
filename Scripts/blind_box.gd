@@ -55,6 +55,8 @@ func _ready() -> void:
 	$Menu.pressed.connect(_on_change_scene_requested.bind("res://Scenes/main.tscn"))
 	$Cards.pressed.connect(_on_change_scene_requested.bind("res://Scenes/TradingCard.tscn"))
 	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
+	$"Play Game".pressed.connect(_on_change_scene_requested.bind("res://Scenes/quiz.tscn"))
+	
 
 
 func _on_change_scene_requested(target: String) -> void:
@@ -67,6 +69,7 @@ func _on_change_scene_requested(target: String) -> void:
 func _on_open_box_pressed() -> void:
 	$OpenBox.hide()
 	if GlobalVariables.tokens <= 0: 
+		$exchange.show()
 		return # Stop execution early if they don't have enough tokens
 		
 	GlobalVariables.tokens -= 1 
@@ -97,9 +100,13 @@ func _on_open_box_pressed() -> void:
 	GlobalVariables.set(prize_data["global_var"], true)
 	
 	if GlobalVariables.has_brain and GlobalVariables.has_heart and GlobalVariables.has_kidneys and GlobalVariables.has_lungs and GlobalVariables.has_stomach and GlobalVariables.has_largeintestines and GlobalVariables.has_smallintestines and GlobalVariables.has_liver: 
-		GlobalVariables.all_common_organs_collected = true 
-		
+		GlobalVariables.all_common_organs_collected = true
+
+		if GlobalVariables.played_ending_cutscene == false: 
+			GlobalVariables.played_ending_cutscene = true
+			get_tree().change_scene_to_file("res://Scenes/closing_video.tscn")
 	
+		
 	# Load and apply texture dynamically
 	show_prize.texture_normal = load(prize_data["texture"])
 	$You_Got.show()

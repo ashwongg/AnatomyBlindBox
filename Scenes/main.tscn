@@ -77,14 +77,13 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "1"
 
-[node name="Movie" type="TextureButton" parent="." unique_id=565468723]
+[node name="Movie" type="Button" parent="." unique_id=708463532]
 layout_mode = 0
-offset_left = 1094.9999
-offset_top = 443.99997
-offset_right = 1594.9999
-offset_bottom = 944.0
+offset_left = 1104.9999
+offset_top = 461.99997
+offset_right = 1612.9999
+offset_bottom = 970.0
 rotation = 0.30543262
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("7_6bp64")
-
-[connection signal="pressed" from="Movie" to="." method="_on_movie_pressed"]
+icon = ExtResource("7_6bp64")
+flat = true

@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dy5768rvrt4l1" path="res://Assets/SpriteSheets/BoxOpening_stomach_rare_SS.png" id="18_imanq"]
 [ext_resource type="Texture2D" uid="uid://ir2dfwif16d3" path="res://Assets/SpriteSheets/boxOpen_placeholder_sprite.png" id="19_36rv1"]
 [ext_resource type="Texture2D" uid="uid://c3gj4alyqu0tg" path="res://Assets/cell.png" id="21_eq7k5"]
+[ext_resource type="Texture2D" uid="uid://c4sh6nwg1rhls" path="res://Assets/exchange.png" id="22_yfnxr"]
 
 [sub_resource type="Animation" id="Animation_fsl4q"]
 resource_name = "openbox"
@@ -8472,6 +8473,16 @@ theme_override_font_sizes/font_size = 42
 text = "Menu
 "
 
+[node name="Play Game" type="Button" parent="." unique_id=1350441998]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 579.0
+offset_right = 937.0
+offset_bottom = 661.0
+theme_override_font_sizes/font_size = 42
+text = "Play Game
+"
+
 [node name="Cards" type="Button" parent="." unique_id=2142603409]
 layout_mode = 0
 offset_left = 110.0
@@ -8483,10 +8494,10 @@ text = "Cards"
 
 [node name="OpenBox" type="Button" parent="." unique_id=2031713888]
 layout_mode = 0
-offset_left = 579.0
-offset_top = 201.0
-offset_right = 1132.0
-offset_bottom = 637.0
+offset_left = 571.0
+offset_top = 158.0
+offset_right = 1124.0
+offset_bottom = 594.0
 theme_override_font_sizes/font_size = 42
 text = "
 "
@@ -8550,113 +8561,113 @@ libraries/ = SubResource("AnimationLibrary_2b2wy")
 
 [node name="spr_HeartOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=491815884]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_heart_basic"
 
 [node name="spr_BrainOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=952856270]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_f1nj7")
 animation = &"is_brain_basic"
 
 [node name="spr_KidneyOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=1714074632]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_kidneys_basic"
 
 [node name="spr_LiverOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=831057136]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_liver_basic"
 
 [node name="spr_LrgIntesOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=730786900]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_lrgintestine_basic"
 
 [node name="spr_SmlIntesOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=326442957]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_smlintestine_basic"
 
 [node name="spr_LungsOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=21360687]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_lungs_basic"
 
 [node name="spr_StomachOpenBox_Common" type="AnimatedSprite2D" parent="." unique_id=68577517]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_stomach_basic"
 
 [node name="spr_HeartOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=727232134]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_heart_rare"
 
 [node name="spr_BrainOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=82878676]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_brain_rare"
 
 [node name="spr_KidneyOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=1973041513]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_kidneys_rare"
 
 [node name="spr_LiverOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=709449174]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_liver_rare"
 
 [node name="spr_LrgIntesOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=602311077]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_lrgintestine_rare"
 
 [node name="spr_SmlIntesOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=533090669]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_smintestine_rare"
 
 [node name="spr_LungsOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=2105263519]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_lungs_rare"
 
 [node name="spr_StomachOpenBox_Rare" type="AnimatedSprite2D" parent="." unique_id=939386147]
 visible = false
-position = Vector2(792, 348)
-scale = Vector2(0.9615088, 0.92205304)
+position = Vector2(787, 298)
+scale = Vector2(1.044, 1)
 sprite_frames = SubResource("SpriteFrames_icw4g")
 animation = &"is_stomach_rare"
 
@@ -8676,7 +8687,17 @@ offset_bottom = 251.0
 texture = ExtResource("21_eq7k5")
 expand_mode = 1
 
+[node name="exchange" type="TextureRect" parent="." unique_id=1782704532]
+visible = false
+layout_mode = 0
+offset_left = 552.0
+offset_top = 251.0
+offset_right = 1093.0
+offset_bottom = 611.0
+texture = ExtResource("22_yfnxr")
+
 [connection signal="pressed" from="Menu" to="Menu" method="_on_pressed"]
+[connection signal="pressed" from="Play Game" to="Play Game" method="_on_pressed"]
 [connection signal="pressed" from="Cards" to="Cards" method="_on_pressed"]
 [connection signal="pressed" from="OpenBox" to="." method="_on_open_box_pressed"]
 [connection signal="pressed" from="visitSkelly" to="." method="_on_open_box_pressed"]

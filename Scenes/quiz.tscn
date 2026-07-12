@@ -1,134 +1,27 @@
 [gd_scene format=3 uid="uid://clsrl1rb1i1uy"]
 
 [ext_resource type="Texture2D" uid="uid://d0og7dmtkam26" path="res://Assets/quiz_page.png" id="1_kninm"]
-[ext_resource type="Resource" uid="uid://dw6d0o8agcdi3" path="res://resources/question_collection/question_collection_1.tres" id="2_i0i4q"]
+[ext_resource type="Script" uid="uid://bauvhvk0kjd1p" path="res://Scripts/quiz.gd" id="1_schtj"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_84grc"]
+[ext_resource type="Resource" uid="uid://byqavcduq1hfp" path="res://resources/questions/question_1.tres" id="3_0iro7"]
+[ext_resource type="Script" uid="uid://cm21ytef347dc" path="res://resources/question_collection/question_collection.gd" id="3_5od8v"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_bu0r6"]
 [ext_resource type="Texture2D" uid="uid://cb5eho4yb3nuo" path="res://Assets/Quiz Button.png" id="3_fdxuh"]
 [ext_resource type="Texture2D" uid="uid://c3gj4alyqu0tg" path="res://Assets/cell.png" id="3_pkwmv"]
+[ext_resource type="Resource" uid="uid://stppv2bw0kib" path="res://resources/questions/question_2.tres" id="4_gpq0x"]
+[ext_resource type="Resource" uid="uid://bjrkgwx74p8er" path="res://resources/questions/question_3.tres" id="5_e7trm"]
+[ext_resource type="Resource" uid="uid://cux6cv16gh24" path="res://resources/questions/question_5.tres" id="6_hwe6j"]
+[ext_resource type="Resource" uid="uid://cw7j5xmmjjwrv" path="res://resources/questions/question_6.tres" id="7_28c1y"]
+[ext_resource type="Resource" uid="uid://bevcbs5ndcc6b" path="res://resources/questions/question_7.tres" id="8_esplf"]
 
-[sub_resource type="GDScript" id="GDScript_y1tew"]
-script/source = "extends Node2D 
-
-@export var quiz_c: Question_collection
-@export var color_right : Color
-@export var color_wrong : Color 
-
-var buttons : Array[Button] = []
-var labels : Array[Label] = []
-
-var index : int 
-var correct: int 
-
-# CHANGED: Updated the question label node path to match your layout update
-@onready var label_question: Label = $Control/MarginContainer/Label_Question
-@onready var question: Node2D = $Control/Question
-@onready var image: TextureRect = $Control/Image
-@onready var no_image: Texture = load(\"res://Assets/Questions_images/no_image.png\")
-
-var shuffled_collection: Array = []
-
-func _ready() -> void: 
-	if quiz_c == null:
-		push_error(\"CRITICAL: You forgot to assign a Question_collection resource to quiz_c in the Inspector!\")
-		return
-		
-	shuffled_collection = quiz_c.collection.duplicate()
-	shuffled_collection.shuffle()
-	
-	for b in question.get_children():
-		if b is Button:
-			buttons.append(b)
-			
-			# SAFE FIX: Look through the button's children to find a MarginContainer,
-			# then look inside that MarginContainer to find the Label node.
-			var child_label: Label = null
-			
-			for child in b.get_children():
-				if child is MarginContainer:
-					# Search inside the MarginContainer for the Label
-					for sub_child in child.get_children():
-						if sub_child is Label:
-							child_label = sub_child
-							break
-				elif child is Label:
-					# Backup: if a label is directly inside without a container
-					child_label = child
-					
-				if child_label:
-					break # Found it, stop looking inside this button
-			
-			if child_label:
-				labels.append(child_label)
-			else:
-				push_error(\"CRITICAL: Could not find a Label inside Button layout hierarchy: \", b.name)
-	
-	load_quiz()
-	$Label.text = \": \" + str(GlobalVariables.tokens)
-
-func load_quiz() -> void: 
-	print(\"Loading quiz! Current index: \", index, \" Total questions: \", shuffled_collection.size())
-	if index >= shuffled_collection.size():
-		load_menu()
-		return
-		
-	label_question.text = shuffled_collection[index].question_info
-	
-	var option = shuffled_collection[index].options
-	
-	for i in buttons.size(): 
-		labels[i].text = option[i] 
-		labels[i].add_theme_font_size_override(\"font_size\", 60) 
-		buttons[i].pressed.connect(button_answer.bind(buttons[i])) 
-		
-	match shuffled_collection[index].type: 
-		question_type.question_Type.text: 
-			image.texture = no_image
-		question_type.question_Type.image: 
-			image.texture = shuffled_collection[index].question_image
-			
-func button_answer(button) -> void: 
-	for bt in buttons:
-		bt.disabled = true
-
-	# FIX: Find the index of the clicked button in your array
-	var button_index = buttons.find(button)
-	
-	# Safeguard against unexpected clicks and verify answer using the tracked labels array
-	if button_index != -1 and shuffled_collection[index].correct == labels[button_index].text: 
-		button.modulate = color_right 
-		GlobalVariables.tokens += 1
-		$Label.text = \"Cells: \" + str(GlobalVariables.tokens)
-	else: 
-		button.modulate = color_wrong
-	
-	load_next_question()
-	
-func load_next_question() -> void: 
-	await get_tree().create_timer(1).timeout
-	
-	for bt in buttons:
-		bt.modulate = Color.WHITE
-		bt.disabled = false 
-		if bt.pressed.is_connected(button_answer):
-			bt.pressed.disconnect(button_answer)
-	
-	index += 1 
-	load_quiz()
-
-func select_panel(panel: Panel) -> void: 
-	for p in $Control/Panel_holder.get_children():
-		if p==panel: 
-			p.show() 
-		else: 
-			p.hide()
-		
-func load_menu() -> void: 
-	get_tree().change_scene_to_file(\"res://Scenes/blind_box.tscn\")
-"
+[sub_resource type="Resource" id="Resource_jmbid"]
+script = ExtResource("3_5od8v")
+collection = Array[ExtResource("2_84grc")]([ExtResource("3_0iro7"), ExtResource("4_gpq0x"), ExtResource("5_e7trm"), ExtResource("6_hwe6j"), ExtResource("7_28c1y"), ExtResource("8_esplf")])
+metadata/_custom_type_script = "uid://cm21ytef347dc"
 
 [node name="Node2D" type="Node2D" unique_id=1395772487]
-script = SubResource("GDScript_y1tew")
-quiz_c = ExtResource("2_i0i4q")
+script = ExtResource("1_schtj")
+quiz_c = SubResource("Resource_jmbid")
 color_right = Color(0.25644788, 0.65125906, 0, 1)
 color_wrong = Color(0.67851394, 0.07579858, 0.036591884, 1)
 
@@ -158,10 +51,15 @@ texture = ExtResource("3_pkwmv")
 expand_mode = 1
 
 [node name="Back" type="Button" parent="." unique_id=1719676113]
-offset_left = 1020.0
-offset_top = 550.0
-offset_right = 1645.0
-offset_bottom = 800.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1004.0
+offset_top = 623.0
+offset_right = 1265.0
+offset_bottom = 713.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_bu0r6")
 flat = true
@@ -190,11 +88,10 @@ autowrap_mode = 3
 
 [node name="Image" type="TextureRect" parent="Control" unique_id=1709814637]
 layout_mode = 0
-offset_left = 831.0
-offset_top = 268.0
-offset_right = 1031.0
-offset_bottom = 468.0
-expand_mode = 5
+offset_left = 735.0
+offset_top = 266.0
+offset_right = 935.0
+offset_bottom = 466.0
 
 [node name="Question" type="Node2D" parent="Control" unique_id=1715757520]
 position = Vector2(126, 155)
@@ -204,18 +101,18 @@ offset_left = 50.0
 offset_top = 103.0
 offset_right = 839.0
 offset_bottom = 463.0
-scale = Vector2(0.4, 0.3)
+scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/Question/Button_A" unique_id=1400933853]
 custom_minimum_size = Vector2(625, 250)
 layout_mode = 0
-offset_left = 137.5
-offset_top = 60.0
-offset_right = 762.5
-offset_bottom = 310.0
-scale = Vector2(0.8, 1)
+offset_left = -10.714272
+offset_top = 40.000004
+offset_right = 614.2857
+offset_bottom = 290.0
+scale = Vector2(1.3, 1.2)
 
 [node name="Button_A_Option" type="Label" parent="Control/Question/Button_A/MarginContainer" unique_id=1657363767]
 show_behind_parent = true
@@ -230,22 +127,22 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button_B" type="Button" parent="Control/Question" unique_id=1359248181]
-offset_left = 376.0
+offset_left = 318.0
 offset_top = 103.0
-offset_right = 1165.0
+offset_right = 1107.0
 offset_bottom = 463.0
-scale = Vector2(0.4, 0.3)
+scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/Question/Button_B" unique_id=1690394884]
 custom_minimum_size = Vector2(625, 250)
 layout_mode = 0
-offset_left = 135.0
-offset_top = 53.333332
-offset_right = 760.0
-offset_bottom = 303.33334
-scale = Vector2(0.8, 1)
+offset_left = -17.857086
+offset_top = 36.666668
+offset_right = 607.14294
+offset_bottom = 286.6667
+scale = Vector2(1.3, 1.2)
 
 [node name="Button_B_Option" type="Label" parent="Control/Question/Button_B/MarginContainer" unique_id=181995905]
 show_behind_parent = true
@@ -264,18 +161,18 @@ offset_left = 50.0
 offset_top = 220.0
 offset_right = 839.0
 offset_bottom = 580.0
-scale = Vector2(0.4, 0.3)
+scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/Question/Button_C" unique_id=619325549]
 custom_minimum_size = Vector2(625, 250)
 layout_mode = 0
-offset_left = 132.5
-offset_top = 59.999996
-offset_right = 757.5
-offset_bottom = 310.0
-scale = Vector2(0.8, 1)
+offset_left = -14.285721
+offset_top = 23.333332
+offset_right = 610.7143
+offset_bottom = 273.33334
+scale = Vector2(1.3, 1.2)
 
 [node name="Button_C_Option" type="Label" parent="Control/Question/Button_C/MarginContainer" unique_id=1864074908]
 show_behind_parent = true
@@ -290,11 +187,11 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button_D" type="Button" parent="Control/Question" unique_id=754506820]
-offset_left = 375.0
+offset_left = 317.99997
 offset_top = 220.0
-offset_right = 1180.0
+offset_right = 1123.0
 offset_bottom = 580.0
-scale = Vector2(0.4, 0.3)
+scale = Vector2(0.28, 0.3)
 text = "
 "
 icon = ExtResource("3_fdxuh")
@@ -303,11 +200,11 @@ flat = true
 [node name="MarginContainer" type="MarginContainer" parent="Control/Question/Button_D" unique_id=2147386383]
 custom_minimum_size = Vector2(625, 250)
 layout_mode = 0
-offset_left = 137.5
-offset_top = 56.666668
-offset_right = 762.5
-offset_bottom = 306.66666
-scale = Vector2(0.8, 1)
+offset_left = -14.285599
+offset_top = 33.333336
+offset_right = 610.7144
+offset_bottom = 283.33334
+scale = Vector2(1.3, 1.2)
 
 [node name="Button_D_Option" type="Label" parent="Control/Question/Button_D/MarginContainer" unique_id=944068158]
 show_behind_parent = true

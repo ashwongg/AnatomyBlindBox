@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc56ofxsxwpvp"
-valid=false
+uid="uid://bto7na371yvif"
+path="res://.godot/imported/lungs.png-db921ea6b1f1eda7174072d2b5470dae.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/visit_skelly.png"
+source_file="res://Assets/Questions_images/lungs.png"
+dest_files=["res://.godot/imported/lungs.png-db921ea6b1f1eda7174072d2b5470dae.ctex"]
 
 [params]
 
