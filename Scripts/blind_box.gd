@@ -28,7 +28,7 @@ extends Control
 # We can store the reward data cleanly in a Dictionary structure
 # Add @onready here so it can reference the sprite nodes below
 @onready var rewards = {
-	1:  {"node": brain_openbox, "global_var": "has_brain", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png"},
+	1:  {"node": brain_openbox, "global_var": "has_brain", "texture": "res://Assets/Trading Cards/F_Basic_Brain.png"},
 	2:  {"node": heart_openbox, "global_var": "has_heart", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png"},
 	3:  {"node": kidney_openbox, "global_var": "has_kidneys", "texture": "res://Assets/Trading Cards/F_Basic_Kidney.png"},
 	4:  {"node": liver_openbox, "global_var": "has_liver", "texture": "res://Assets/Trading Cards/F_Basic_Liver.png"},

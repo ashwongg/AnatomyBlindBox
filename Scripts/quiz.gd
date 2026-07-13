@@ -15,6 +15,7 @@ var correct: int
 @onready var image: TextureRect = $Control/Image
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
+const BLIND_BOX_SCENE = preload("res://Scenes/blind_box.tscn")
 # RE-ADDED: Reference your Back button node safely
 @onready var back_button: Button = get_node_or_null("Back")
 
@@ -28,6 +29,11 @@ func _ready() -> void:
 	shuffled_collection = quiz_c.collection.duplicate()
 	shuffled_collection.shuffle()
 	
+	if back_button:
+		$Back.pressed.connect(_on_change_scene_requested.bind(BLIND_BOX_SCENE))
+	else:
+		push_error("WARNING: Could not find a node named 'Back' in your scene root!")
+
 	for b in question.get_children():
 		if b is Button:
 			buttons.append(b)
@@ -53,12 +59,7 @@ func _ready() -> void:
 			else:
 				push_error("CRITICAL: Could not find a Label inside Button layout hierarchy: ", b.name)
 	
-	# RE-ADDED & FIXED: Safely connect the back button right here
-	if back_button:
-		back_button.pressed.connect(_on_change_scene_requested.bind("res://Scenes/blind_box.tscn"))
-	else:
-		push_error("WARNING: Could not find a node named 'Back' in your scene root!")
-
+	
 	$Label.text = " : " + str(GlobalVariables.tokens)
 	load_quiz()
 
@@ -117,14 +118,14 @@ func select_panel(panel: Panel) -> void:
 			p.show() 
 		else: 
 			p.hide()
-		
+			
 func load_menu() -> void: 
-	get_tree().change_scene_to_file("res://Scenes/blind_box.tscn")
+	get_tree().change_scene_to_packed(BLIND_BOX_SCENE)
 
-# RE-ADDED: Missing scene controller utility
-func _on_change_scene_requested(target: String) -> void:
-	if target == "QUIT":
+
+func _on_change_scene_requested(target) -> void:
+	if target is String and target == "QUIT":
 		get_tree().quit()
-	else:
-		print("Switching to scene: ", target)
-		get_tree().change_scene_to_file(target)
+	elif target is PackedScene:
+		print("Switching to preloaded scene...")
+		get_tree().change_scene_to_packed(target)

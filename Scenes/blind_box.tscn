@@ -8466,19 +8466,19 @@ expand_mode = 1
 [node name="Menu" type="Button" parent="." unique_id=465074531]
 layout_mode = 0
 offset_left = 110.0
-offset_top = 466.0
+offset_top = 566.0
 offset_right = 355.0
-offset_bottom = 548.0
+offset_bottom = 648.0
 theme_override_font_sizes/font_size = 42
 text = "Menu
 "
 
 [node name="Play Game" type="Button" parent="." unique_id=1350441998]
 layout_mode = 0
-offset_left = 692.0
-offset_top = 579.0
-offset_right = 937.0
-offset_bottom = 661.0
+offset_left = 110.0
+offset_top = 455.0
+offset_right = 355.0
+offset_bottom = 537.0
 theme_override_font_sizes/font_size = 42
 text = "Play Game
 "
@@ -8696,7 +8696,6 @@ offset_right = 1093.0
 offset_bottom = 611.0
 texture = ExtResource("22_yfnxr")
 
-[connection signal="pressed" from="Menu" to="Menu" method="_on_pressed"]
 [connection signal="pressed" from="Play Game" to="Play Game" method="_on_pressed"]
 [connection signal="pressed" from="Cards" to="Cards" method="_on_pressed"]
 [connection signal="pressed" from="OpenBox" to="." method="_on_open_box_pressed"]
