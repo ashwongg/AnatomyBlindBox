@@ -50,18 +50,20 @@ grow_vertical = 2
 
 [node name="Next" type="Button" parent="." unique_id=1751923659]
 layout_mode = 0
-offset_left = 1105.0
-offset_top = 273.0
-offset_right = 1276.0
-offset_bottom = 401.0
+offset_left = 1151.0001
+offset_top = 597.0
+offset_right = 1322.0001
+offset_bottom = 725.0
+scale = Vector2(0.7, 0.7)
 icon = ExtResource("27_p6nei")
 flat = true
 
 [node name="Back" type="Button" parent="." unique_id=1197614805]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 261.0
-offset_right = 179.0
-offset_bottom = 389.0
+offset_left = 13.999999
+offset_top = 602.0
+offset_right = 185.0
+offset_bottom = 730.0
+scale = Vector2(0.7, 0.7)
 icon = ExtResource("28_phc7p")
 flat = true

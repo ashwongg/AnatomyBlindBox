@@ -13,6 +13,8 @@ var correct: int
 @onready var label_question: Label = $Control/MarginContainer/Label_Question
 @onready var question: Node2D = $Control/Question
 @onready var image: TextureRect = $Control/Image
+@onready var skelly_happy: Texture = load("res://Assets/Skelly-right.png")
+@onready var skelly_tryagain: Texture = load("res://Assets/Skelly-wrong.png")
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
 const BLIND_BOX_SCENE = preload("res://Scenes/blind_box.tscn")
@@ -60,7 +62,7 @@ func _ready() -> void:
 				push_error("CRITICAL: Could not find a Label inside Button layout hierarchy: ", b.name)
 	
 	
-	$Label.text = " : " + str(GlobalVariables.tokens)
+	$Label.text = " " + str(GlobalVariables.tokens)
 	load_quiz()
 
 
@@ -90,28 +92,47 @@ func button_answer(button: Button) -> void:
 		bt.disabled = true
 
 	var button_index = buttons.find(button)
+	var correct_answer_text = shuffled_collection[index].correct
 	
-	if button_index != -1 and shuffled_collection[index].correct == labels[button_index].text: 
+	if button_index != -1 and correct_answer_text == labels[button_index].text: 
+		# Correct Answer
 		button.modulate = color_right 
 		GlobalVariables.tokens += 1
-		$Label.text = " : " + str(GlobalVariables.tokens)
+		
+		# FIX: Change the icon property instead of drawing
+		$Skelly.icon = skelly_happy
+		
+		$Label.text = " " + str(GlobalVariables.tokens)
 	else: 
+		# Wrong Answer - Highlight chosen button as wrong
+		# FIX: Change the icon property instead of drawing
+		$Skelly.icon = skelly_tryagain
+		
 		button.modulate = color_wrong
+		
+		# Find and highlight the actual correct button
+		for i in buttons.size():
+			if i < labels.size() and labels[i].text == correct_answer_text:
+				buttons[i].modulate = color_right
+				break
 	
 	load_next_question()
 	
 func load_next_question() -> void: 
-	await get_tree().create_timer(0.4).timeout
+	# Increased from 0.4 to 1.5 seconds so the player can see the correct answer
+	await get_tree().create_timer(3).timeout
 	
-	# CLEAN: No disconnecting required anymore because we connected strictly once in _ready()
+	# Reset button states and colors for the next question
 	for bt in buttons:
 		bt.modulate = Color.WHITE
 		bt.disabled = false 
 	
+	# RESET SKELLY: Clear the icon (or set it to a default idle texture if you have one)
+	$Skelly.icon = null 
+	
 	index += 1 
-	load_quiz()
-
-
+	load_menu()
+	#load_quiz()
 func select_panel(panel: Panel) -> void: 
 	for p in $Control/Panel_holder.get_children():
 		if p == panel: 

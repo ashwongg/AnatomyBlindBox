@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://cxgccfocq1ycs"]
 
 [ext_resource type="Script" uid="uid://cvs08j1kmgs45" path="res://Scripts/closing_video.gd" id="1_7xe0l"]
-[ext_resource type="VideoStream" uid="uid://cp41ih7c8sdlp" path="res://Assets/Intro Video/closing_movie_draft.ogv" id="2_7xe0l"]
+[ext_resource type="Texture2D" uid="uid://bolwl51rvfblo" path="res://Assets/next_arrow.png" id="2_74gjg"]
+[ext_resource type="Texture2D" uid="uid://c8utux2j6u40b" path="res://Assets/Intro Video/Closing scene-13.png" id="2_divk5"]
+[ext_resource type="Texture2D" uid="uid://bxu02ny46qh5h" path="res://Assets/back_arrow.png" id="3_kwmmn"]
+[ext_resource type="Texture2D" uid="uid://dwmi5ewt2a5pv" path="res://Assets/Intro Video/Closing scene-14.png" id="3_s158c"]
+[ext_resource type="Texture2D" uid="uid://67vdx8x7ahuf" path="res://Assets/Intro Video/Closing scene-15.png" id="4_jpval"]
+[ext_resource type="Texture2D" uid="uid://bk36dm67wb75w" path="res://Assets/Intro Video/Closing scene-16.png" id="5_0fvj6"]
+[ext_resource type="Texture2D" uid="uid://culci1l74h4m8" path="res://Assets/Intro Video/Closing scene-17.png" id="6_8i82x"]
+[ext_resource type="Texture2D" uid="uid://dees2fugmm73s" path="res://Assets/Intro Video/Closing scene-18.png" id="7_f7bmv"]
+[ext_resource type="Texture2D" uid="uid://cdgbdbwo7548m" path="res://Assets/Intro Video/Closing scene-19.png" id="8_a76fr"]
 
 [node name="ClosingVideo" type="Control" unique_id=486546096]
 layout_mode = 3
@@ -11,15 +19,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7xe0l")
+cutscene_images = Array[Texture2D]([ExtResource("2_divk5"), ExtResource("3_s158c"), ExtResource("4_jpval"), ExtResource("5_0fvj6"), ExtResource("6_8i82x"), ExtResource("7_f7bmv"), ExtResource("8_a76fr")])
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=653261728]
+[node name="CutsceneImage" type="TextureRect" parent="." unique_id=1463091071]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_7xe0l")
-autoplay = true
 
-[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[node name="Next" type="Button" parent="." unique_id=1441312729]
+layout_mode = 0
+offset_left = 1151.0001
+offset_top = 597.0
+offset_right = 1322.0001
+offset_bottom = 725.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("2_74gjg")
+flat = true
+
+[node name="Back" type="Button" parent="." unique_id=557033975]
+layout_mode = 0
+offset_left = 13.999999
+offset_top = 602.0
+offset_right = 185.0
+offset_bottom = 730.0
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("3_kwmmn")
+flat = true

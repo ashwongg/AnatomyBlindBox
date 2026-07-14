@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwkgt00ncgtbn"
-path="res://.godot/imported/Skelly_room.png-e6533e2b827ebaa83b4a2f54ac54cd54.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Skelly_room.png"
-dest_files=["res://.godot/imported/Skelly_room.png-e6533e2b827ebaa83b4a2f54ac54cd54.ctex"]
 
 [params]
 

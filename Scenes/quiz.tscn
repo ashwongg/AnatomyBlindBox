@@ -1,25 +1,19 @@
 [gd_scene format=3 uid="uid://clsrl1rb1i1uy"]
 
-[ext_resource type="Texture2D" uid="uid://d0og7dmtkam26" path="res://Assets/quiz_page.png" id="1_kninm"]
 [ext_resource type="Script" uid="uid://bauvhvk0kjd1p" path="res://Scripts/quiz.gd" id="1_schtj"]
 [ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_84grc"]
 [ext_resource type="Resource" uid="uid://byqavcduq1hfp" path="res://resources/questions/question_1.tres" id="3_0iro7"]
 [ext_resource type="Script" uid="uid://cm21ytef347dc" path="res://resources/question_collection/question_collection.gd" id="3_5od8v"]
-[ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_bu0r6"]
 [ext_resource type="Texture2D" uid="uid://cb5eho4yb3nuo" path="res://Assets/Quiz Button.png" id="3_fdxuh"]
-[ext_resource type="Texture2D" uid="uid://c3gj4alyqu0tg" path="res://Assets/cell.png" id="3_pkwmv"]
 [ext_resource type="Resource" uid="uid://stppv2bw0kib" path="res://resources/questions/question_2.tres" id="4_gpq0x"]
 [ext_resource type="Resource" uid="uid://bjrkgwx74p8er" path="res://resources/questions/question_3.tres" id="5_e7trm"]
 [ext_resource type="Resource" uid="uid://cux6cv16gh24" path="res://resources/questions/question_5.tres" id="6_hwe6j"]
 [ext_resource type="Resource" uid="uid://cw7j5xmmjjwrv" path="res://resources/questions/question_6.tres" id="7_28c1y"]
 [ext_resource type="Resource" uid="uid://bevcbs5ndcc6b" path="res://resources/questions/question_7.tres" id="8_esplf"]
-[ext_resource type="Texture2D" uid="uid://dicdg3lgetosg" path="res://Assets/help.png" id="13_u0t0f"]
-[ext_resource type="Texture2D" uid="uid://kw4leql7hihs" path="res://Assets/book.png" id="14_b1cha"]
-[ext_resource type="Texture2D" uid="uid://i03ltol3jrxw" path="res://Assets/Respiratory_btn.png" id="15_rdenf"]
-[ext_resource type="Texture2D" uid="uid://cfj2f0ovtp7gl" path="res://Assets/Circulatory_btn.png" id="16_otvxn"]
-[ext_resource type="Texture2D" uid="uid://druneoy6tycye" path="res://Assets/Digestive_btn.png" id="17_0hcd3"]
-[ext_resource type="Texture2D" uid="uid://b0wjietumx1uh" path="res://Assets/Neurology_btn.png" id="18_nffbb"]
-[ext_resource type="Texture2D" uid="uid://bca61fblhmvgb" path="res://Assets/Urinary_btn.png" id="19_4ffjb"]
+[ext_resource type="Texture2D" uid="uid://5d70iwja6lqm" path="res://Assets/quiz page.jpg" id="10_u0t0f"]
+[ext_resource type="Texture2D" uid="uid://cokbdx3bnlhkr" path="res://Assets/icons/CellNumber.png" id="11_b1cha"]
+[ext_resource type="Texture2D" uid="uid://dy1h7w7717mv0" path="res://Assets/icons/Menu_1.png" id="12_rdenf"]
+[ext_resource type="Texture2D" uid="uid://d02qxkfwomrrl" path="res://Assets/Skelly-right.png" id="13_otvxn"]
 
 [sub_resource type="Resource" id="Resource_jmbid"]
 script = ExtResource("3_5od8v")
@@ -37,125 +31,54 @@ offset_left = -2.0
 offset_top = -3.0
 offset_right = 1281.0
 offset_bottom = 724.0
-texture = ExtResource("1_kninm")
+texture = ExtResource("10_u0t0f")
 expand_mode = 1
-
-[node name="Label" type="Label" parent="." unique_id=741956553]
-offset_left = 1093.0
-offset_top = 116.0
-offset_right = 1296.0
-offset_bottom = 175.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "1"
 
 [node name="Cell" type="TextureRect" parent="." unique_id=857798995]
 offset_left = 994.0
-offset_top = 85.0
-offset_right = 1119.0
-offset_bottom = 210.0
-texture = ExtResource("3_pkwmv")
+offset_top = 70.0
+offset_right = 1268.0
+offset_bottom = 168.0
+scale = Vector2(1, 0.95)
+texture = ExtResource("11_b1cha")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=741956553]
+offset_left = 1095.0
+offset_top = 84.0
+offset_right = 1298.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "1"
 
 [node name="Back" type="Button" parent="." unique_id=1719676113]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1004.0
-offset_top = 623.0
-offset_right = 1265.0
-offset_bottom = 713.0
+offset_left = 989.00006
+offset_top = 161.0
+offset_right = 1447.0
+offset_bottom = 276.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 42
-icon = ExtResource("3_bu0r6")
+icon = ExtResource("12_rdenf")
 flat = true
 
-[node name="Help" type="Button" parent="." unique_id=2067820623]
-offset_left = -31.999996
-offset_top = 401.0
-offset_right = 342.0
-offset_bottom = 809.0
-scale = Vector2(0.8, 0.8)
-icon = ExtResource("13_u0t0f")
-flat = true
-
-[node name="Help_Label" type="Label" parent="." unique_id=91058625]
-offset_left = 201.0
-offset_top = 621.0
-offset_right = 419.0
-offset_bottom = 680.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 27
-text = "Click me for help"
-
-[node name="Book Window" type="Window" parent="." unique_id=375856060]
-oversampling_override = 1.0
-position = Vector2i(351, 36)
-size = Vector2i(727, 526)
-visible = false
-
-[node name="Book Bg" type="TextureRect" parent="Book Window" unique_id=530752852]
+[node name="Skelly" type="Button" parent="." unique_id=2067820623]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -204.0
-offset_top = -190.0
-offset_right = 69.0
-offset_bottom = 12.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_b1cha")
-expand_mode = 1
-
-[node name="Respiratory" type="Button" parent="Book Window" unique_id=253000437]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 147.99998
-offset_top = 181.99998
-offset_right = 242.0
-offset_bottom = 42.0
+offset_left = -26.0
+offset_top = 449.0
+offset_right = 1056.0
+offset_bottom = 1387.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)
-icon = ExtResource("15_rdenf")
-flat = true
-
-[node name="Circulatory" type="Button" parent="Book Window" unique_id=1868406316]
-offset_left = 397.99997
-offset_top = 182.99998
-offset_right = 1187.0
-offset_bottom = 543.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("16_otvxn")
-flat = true
-
-[node name="Digestive" type="Button" parent="Book Window" unique_id=254220694]
-offset_left = 149.99998
-offset_top = 298.0
-offset_right = 939.0
-offset_bottom = 658.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("17_0hcd3")
-flat = true
-
-[node name="Neurology" type="Button" parent="Book Window" unique_id=1860349400]
-offset_left = 397.99997
-offset_top = 293.0
-offset_right = 1187.0
-offset_bottom = 653.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("18_nffbb")
-flat = true
-
-[node name="Urinary" type="Button" parent="Book Window" unique_id=2118944747]
-offset_left = 150.0
-offset_top = 410.0
-offset_right = 939.0
-offset_bottom = 770.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("19_4ffjb")
+icon = ExtResource("13_otvxn")
 flat = true
 
 [node name="Control" type="Control" parent="." unique_id=375117892]
@@ -182,19 +105,19 @@ autowrap_mode = 3
 
 [node name="Image" type="TextureRect" parent="Control" unique_id=1709814637]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 266.0
-offset_right = 935.0
-offset_bottom = 466.0
+offset_left = 789.0
+offset_top = 277.0
+offset_right = 989.0
+offset_bottom = 477.0
 
 [node name="Question" type="Node2D" parent="Control" unique_id=1715757520]
 position = Vector2(126, 155)
 
 [node name="Button_A" type="Button" parent="Control/Question" unique_id=1539344449]
-offset_left = 50.0
-offset_top = 103.0
-offset_right = 839.0
-offset_bottom = 463.0
+offset_left = 140.0
+offset_top = 113.0
+offset_right = 929.0
+offset_bottom = 473.0
 scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
@@ -221,10 +144,10 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button_B" type="Button" parent="Control/Question" unique_id=1359248181]
-offset_left = 318.0
-offset_top = 103.0
-offset_right = 1107.0
-offset_bottom = 463.0
+offset_left = 408.0
+offset_top = 113.0
+offset_right = 1197.0
+offset_bottom = 473.0
 scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
@@ -251,10 +174,10 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button_C" type="Button" parent="Control/Question" unique_id=963400407]
-offset_left = 50.0
-offset_top = 220.0
-offset_right = 839.0
-offset_bottom = 580.0
+offset_left = 140.0
+offset_top = 230.0
+offset_right = 929.0
+offset_bottom = 590.0
 scale = Vector2(0.28, 0.3)
 icon = ExtResource("3_fdxuh")
 flat = true
@@ -281,10 +204,10 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Button_D" type="Button" parent="Control/Question" unique_id=754506820]
-offset_left = 317.99997
-offset_top = 220.0
-offset_right = 1123.0
-offset_bottom = 580.0
+offset_left = 407.99997
+offset_top = 230.0
+offset_right = 1213.0
+offset_bottom = 590.0
 scale = Vector2(0.28, 0.3)
 text = "
 "

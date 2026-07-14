@@ -51,7 +51,7 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void: 
 	rng.randomize()
-	$Label.text = " : " + str(GlobalVariables.tokens)
+	$Label.text = " " + str(GlobalVariables.tokens)
 	$Menu.pressed.connect(_on_change_scene_requested.bind("res://Scenes/main.tscn"))
 	$Cards.pressed.connect(_on_change_scene_requested.bind("res://Scenes/TradingCard.tscn"))
 	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
@@ -73,7 +73,7 @@ func _on_open_box_pressed() -> void:
 		return # Stop execution early if they don't have enough tokens
 		
 	GlobalVariables.tokens -= 1 
-	$Label.text = " : " + str(GlobalVariables.tokens)
+	$Label.text = " " + str(GlobalVariables.tokens)
 	
 	var roll = rng.randi_range(1, 16)
 	var prize_data = rewards[roll]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crc0kumqiswyx"]
 
 [ext_resource type="Script" uid="uid://be45dur80cfu8" path="res://Scripts/visit_skelly.gd" id="1_ivyyr"]
-[ext_resource type="Texture2D" uid="uid://dwkgt00ncgtbn" path="res://Assets/Skelly_room.png" id="2_t1k07"]
+[ext_resource type="Texture2D" uid="uid://celonccm42b8k" path="res://Assets/Skelly room_updated.jpg" id="2_beb5f"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_by7u1"]
 [ext_resource type="Texture2D" uid="uid://e8cujwa1nkgl" path="res://Assets/organ characters/lungs.png" id="4_m626k"]
 [ext_resource type="Texture2D" uid="uid://dy7k7nh10cure" path="res://Assets/organ characters/large intestine.png" id="6_3j4rl"]
@@ -13,8 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://b8c32bn6ygdx" path="res://Assets/organ characters/L_kidneys.png" id="11_beb5f"]
 [ext_resource type="Texture2D" uid="uid://bb0xljytbhfrc" path="res://Assets/Questions_images/Heart.png" id="12_t1k07"]
 [ext_resource type="Texture2D" uid="uid://cexbrklfk0o62" path="res://Assets/rib_cage.png" id="13_4xe5t"]
+[ext_resource type="Texture2D" uid="uid://snuujgsqxah3" path="res://Assets/disco_2.png" id="14_beb5f"]
 
-[node name="VisitSkelly" type="Control" unique_id=2126481693]
+[node name="VisitSkelly_Rare" type="Control" unique_id=2126481693]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,90 +31,98 @@ offset_top = -6.999939
 offset_right = 1671.9337
 offset_bottom = 1113.4309
 scale = Vector2(0.7673334, 0.64975)
-texture = ExtResource("2_t1k07")
+texture = ExtResource("2_beb5f")
 expand_mode = 1
 
 [node name="Back" type="Button" parent="." unique_id=1547266867]
 layout_mode = 0
-offset_left = 952.0
-offset_top = 527.0
-offset_right = 1213.0
-offset_bottom = 617.0
+offset_left = 975.0
+offset_top = 606.0
+offset_right = 1236.0
+offset_bottom = 696.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_by7u1")
 flat = true
 
 [node name="brain" type="Button" parent="." unique_id=1428633790]
+visible = false
 layout_mode = 0
-offset_left = 668.0
-offset_top = 27.999998
-offset_right = 1155.0
-offset_bottom = 445.0
+offset_left = 587.0
+offset_top = 62.999992
+offset_right = 1074.0
+offset_bottom = 480.0
 scale = Vector2(0.35, 0.35)
 icon = ExtResource("9_4xe5t")
 flat = true
 
-[node name="lungs" type="Button" parent="." unique_id=1948922125]
-layout_mode = 0
-offset_left = 1043.0
-offset_top = 200.0
-offset_right = 2051.0
-offset_bottom = 1106.0
-scale = Vector2(0.2, 0.2)
-icon = ExtResource("4_m626k")
-flat = true
-
 [node name="R_Kidney" type="Button" parent="." unique_id=858202190]
+visible = false
 layout_mode = 0
-offset_left = 830.0
-offset_top = 433.0
-offset_right = 1082.0
-offset_bottom = 865.0
+offset_left = 854.0
+offset_top = 427.0
+offset_right = 1106.0
+offset_bottom = 859.0
 scale = Vector2(0.3, 0.3)
 icon = ExtResource("8_t1k07")
 flat = true
 
 [node name="L_Kidney" type="Button" parent="." unique_id=183202884]
+visible = false
 layout_mode = 0
-offset_left = 738.00006
-offset_top = 382.0
-offset_right = 990.00006
-offset_bottom = 815.0
+offset_left = 776.00006
+offset_top = 430.00003
+offset_right = 1028.0
+offset_bottom = 863.0
 scale = Vector2(0.3, 0.3)
 icon = ExtResource("11_beb5f")
 flat = true
 
 [node name="liver" type="Button" parent="." unique_id=268270228]
+visible = false
 layout_mode = 0
-offset_left = 870.0
-offset_top = 10.0000305
-offset_right = 1128.0
-offset_bottom = 268.00003
+offset_left = 837.0
+offset_top = 240.00002
+offset_right = 1095.0
+offset_bottom = 498.0
 scale = Vector2(0.6, 0.6)
 icon = ExtResource("8_beb5f")
 flat = true
 
-[node name="small intestine" type="Button" parent="." unique_id=1850378324]
+[node name="lungs" type="Button" parent="." unique_id=1948922125]
+visible = false
 layout_mode = 0
-offset_left = 1139.0
-offset_top = 388.0
-offset_right = 1745.0
-offset_bottom = 1051.0001
-scale = Vector2(0.17, 0.17)
+offset_left = 576.0
+offset_top = 221.0
+offset_right = 1584.0
+offset_bottom = 1127.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("4_m626k")
+flat = true
+
+[node name="small intestine" type="Button" parent="." unique_id=1850378324]
+visible = false
+layout_mode = 0
+offset_left = 1052.0
+offset_top = 262.00006
+offset_right = 1716.7056
+offset_bottom = 991.4113
+scale = Vector2(0.2, 0.2)
 icon = ExtResource("7_t1k07")
 flat = true
 
 [node name="large intestine" type="Button" parent="." unique_id=294748453]
+visible = false
 layout_mode = 0
-offset_left = 1049.0
-offset_top = 31.0
-offset_right = 1928.0
-offset_bottom = 1020.0
+offset_left = 996.0
+offset_top = 65.0
+offset_right = 1875.0
+offset_bottom = 1054.0
 scale = Vector2(0.2, 0.162)
 icon = ExtResource("6_3j4rl")
 flat = true
 
 [node name="stomach" type="Button" parent="." unique_id=1461330060]
+visible = false
 layout_mode = 0
 offset_left = 980.0
 offset_top = 390.0
@@ -124,32 +133,41 @@ icon = ExtResource("10_r23g8")
 flat = true
 
 [node name="heart" type="Button" parent="." unique_id=1756618685]
+visible = false
 layout_mode = 0
-offset_left = 648.0
-offset_top = 199.00003
-offset_right = 906.0
-offset_bottom = 457.00003
+offset_left = 796.0
+offset_top = 46.000015
+offset_right = 1054.0
+offset_bottom = 304.0
 scale = Vector2(0.65, 0.65)
 icon = ExtResource("12_t1k07")
 flat = true
 
 [node name="rib cage" type="TextureRect" parent="." unique_id=1146221653]
-visible = false
 self_modulate = Color(1, 1, 1, 0.6901961)
 layout_mode = 0
-offset_left = 392.0
-offset_top = 355.0
-offset_right = 635.0
-offset_bottom = 605.0
+offset_left = 268.0
+offset_top = 352.0
+offset_right = 511.0
+offset_bottom = 602.0
 texture = ExtResource("13_4xe5t")
 expand_mode = 1
 
-[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[node name="disco" type="Button" parent="." unique_id=65526491]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -275.0
+offset_right = 485.0
+offset_bottom = 421.0
+scale = Vector2(0.65, 0.65)
+icon = ExtResource("14_beb5f")
+flat = true
+
 [connection signal="pressed" from="brain" to="." method="_on_brain_pressed"]
-[connection signal="pressed" from="lungs" to="." method="_on_lung_pressed"]
 [connection signal="pressed" from="R_Kidney" to="." method="_on_kidneys_pressed"]
 [connection signal="pressed" from="L_Kidney" to="." method="_on_kidneys_pressed"]
 [connection signal="pressed" from="liver" to="." method="_on_liver_pressed"]
+[connection signal="pressed" from="lungs" to="." method="_on_lung_pressed"]
 [connection signal="pressed" from="small intestine" to="." method="_on_sm_intestine_pressed"]
 [connection signal="pressed" from="large intestine" to="." method="_on_lrg_intestine_pressed"]
 [connection signal="pressed" from="stomach" to="." method="_on_stomach_pressed"]
