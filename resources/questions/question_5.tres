@@ -11,4 +11,5 @@ type = 1
 question_image = ExtResource("1_rrn1e")
 options = Array[String](["Nervous", "Digestive", "Urinary", "Respiratory"])
 correct = "Digestive"
+hint = "Part of the system that your stomach belongs to"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

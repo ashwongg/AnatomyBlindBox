@@ -7,4 +7,5 @@ script = ExtResource("1_d5y88")
 question_info = "What body system moves blood through the body?"
 options = Array[String](["Respiratory", "Circulatory", "Urinary ", "Nervous"])
 correct = "Circulatory"
+hint = "It's part of the system the heart belongs to"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

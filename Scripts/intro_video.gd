@@ -53,6 +53,7 @@ func _on_back_pressed() -> void:
 
 func load_next_scene() -> void:
 	if next_scene_path and next_scene_path != "":
+		GlobalVariables.played_intro_cutscene = true 
 		get_tree().change_scene_to_file(next_scene_path)
 	else:
 		push_error("ERROR: No next scene path specified in the Inspector!")

@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dy5768rvrt4l1" path="res://Assets/SpriteSheets/BoxOpening_stomach_rare_SS.png" id="18_imanq"]
 [ext_resource type="Texture2D" uid="uid://ir2dfwif16d3" path="res://Assets/SpriteSheets/boxOpen_placeholder_sprite.png" id="19_36rv1"]
 [ext_resource type="Texture2D" uid="uid://c4sh6nwg1rhls" path="res://Assets/exchange.png" id="22_yfnxr"]
+[ext_resource type="Texture2D" uid="uid://bq6hy6qxnp4d8" path="res://Assets/icons/movie.png" id="28_5bpuu"]
 
 [sub_resource type="Animation" id="Animation_fsl4q"]
 resource_name = "openbox"
@@ -8509,10 +8510,10 @@ flat = true
 
 [node name="OpenBox" type="Button" parent="." unique_id=2031713888]
 layout_mode = 0
-offset_left = 656.0
-offset_top = 170.0
-offset_right = 1209.0
-offset_bottom = 606.0
+offset_left = 654.0
+offset_top = 172.0
+offset_right = 1104.0
+offset_bottom = 608.0
 theme_override_font_sizes/font_size = 42
 text = "
 "
@@ -8702,6 +8703,17 @@ offset_right = 1093.0
 offset_bottom = 611.0
 texture = ExtResource("22_yfnxr")
 
+[node name="closing_movie" type="Button" parent="." unique_id=80242017]
+visible = false
+layout_mode = 0
+offset_left = 1127.0
+offset_top = 562.0
+offset_right = 1314.0
+offset_bottom = 758.0
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("28_5bpuu")
+flat = true
+
 [connection signal="pressed" from="Play Game" to="Play Game" method="_on_pressed"]
 [connection signal="pressed" from="Cards" to="Cards" method="_on_pressed"]
 [connection signal="pressed" from="OpenBox" to="." method="_on_open_box_pressed"]
@@ -8724,3 +8736,4 @@ texture = ExtResource("22_yfnxr")
 [connection signal="animation_finished" from="spr_LungsOpenBox_Rare" to="." method="_on_spr_open_box_animation_finished"]
 [connection signal="animation_finished" from="spr_StomachOpenBox_Rare" to="." method="_on_spr_open_box_animation_finished"]
 [connection signal="animation_finished" from="spr_PlaceholderOpenBox" to="." method="_on_spr_open_box_animation_finished"]
+[connection signal="pressed" from="closing_movie" to="." method="_on_closing_movie_pressed"]

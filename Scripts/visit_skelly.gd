@@ -4,11 +4,12 @@ extends Control
 @export var slide_duration: float = 0.5
 
 
-
 func _ready():
 	# 1. Preload the scenes at the top of the file so they sit in RAM ready to go
 	ResourceLoader.load_threaded_request("res://Scenes/blind_box.tscn")
 	ResourceLoader.load_threaded_request("res://Scenes/VisitSkelly_rare.tscn")
+	
+
 	
 	if GlobalVariables.has_lungs:
 		$lungs.visible = true
@@ -85,3 +86,12 @@ func _on_rib_cage_focus_entered() -> void:
 
 func _on_rib_cage_focus_exited() -> void:
 	$"rib cage".self_modulate.a = 1
+
+
+func _on_disco_mouse_entered() -> void:
+	$disco.icon = load("res://Assets/disco.png")
+	$disco.position.y = -200
+	
+func _on_disco_mouse_exited() -> void:
+	$disco.icon = load("res://Assets/disco_2.png")
+	$disco.position.y = -275

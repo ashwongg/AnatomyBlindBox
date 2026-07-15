@@ -57,7 +57,8 @@ func _ready() -> void:
 	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
 	$"Play Game".pressed.connect(_on_change_scene_requested.bind("res://Scenes/quiz.tscn"))
 	
-
+	if GlobalVariables.played_ending_cutscene == true: 
+		$closing_movie.visible = true
 
 func _on_change_scene_requested(target: String) -> void:
 	if target == "QUIT":
@@ -115,3 +116,7 @@ func _on_open_box_pressed() -> void:
 func _on_show_prize_pressed() -> void:
 	$OpenBox.show()
 	popup2.hide()
+
+
+func _on_closing_movie_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/closing_video.tscn")

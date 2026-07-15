@@ -8,4 +8,5 @@ question_info = "Skeletons are made of ___?
 "
 options = Array[String](["Bones", "Blood", "Organs", "Skin"])
 correct = "Bones"
+hint = "Its white"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

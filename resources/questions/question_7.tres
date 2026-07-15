@@ -10,4 +10,5 @@ type = 1
 question_image = ExtResource("1_wsmvh")
 options = Array[String](["Kidney", "Stomach", "Lungs", "Small Intestines"])
 correct = "Lungs"
+hint = "It's part of the respiratory system"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

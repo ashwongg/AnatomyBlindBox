@@ -6,3 +6,4 @@ class_name Question_resource
 @export var question_image : Texture2D
 @export var options : Array[String]
 @export var correct : String
+@export var hint : String

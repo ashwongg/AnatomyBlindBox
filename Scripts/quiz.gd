@@ -15,6 +15,7 @@ var correct: int
 @onready var image: TextureRect = $Control/Image
 @onready var skelly_happy: Texture = load("res://Assets/Skelly-right.png")
 @onready var skelly_tryagain: Texture = load("res://Assets/Skelly-wrong.png")
+@onready var skelly_help: Texture = load("res://Assets/help.png")
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
 const BLIND_BOX_SCENE = preload("res://Scenes/blind_box.tscn")
@@ -74,12 +75,14 @@ func load_quiz() -> void:
 		
 	label_question.text = shuffled_collection[index].question_info
 	var option = shuffled_collection[index].options
-	
+	var hint_text = shuffled_collection[index].hint
 	# CLEAN: Only update UI text and font overrides here. Do NOT connect signals here!
 	for i in buttons.size(): 
 		if i < option.size():
 			labels[i].text = option[i] 
 			labels[i].add_theme_font_size_override("font_size", 60) 
+	
+	$Window/book/hint.text = hint_text
 		
 	match shuffled_collection[index].type: 
 		question_type.question_Type.text: 
@@ -93,6 +96,7 @@ func button_answer(button: Button) -> void:
 
 	var button_index = buttons.find(button)
 	var correct_answer_text = shuffled_collection[index].correct
+	
 	
 	if button_index != -1 and correct_answer_text == labels[button_index].text: 
 		# Correct Answer
@@ -119,8 +123,8 @@ func button_answer(button: Button) -> void:
 	load_next_question()
 	
 func load_next_question() -> void: 
-	# Increased from 0.4 to 1.5 seconds so the player can see the correct answer
-	await get_tree().create_timer(3).timeout
+	# Increased from 0.4 to 2.5 seconds so the player can see the correct answer
+	await get_tree().create_timer(2.5).timeout
 	
 	# Reset button states and colors for the next question
 	for bt in buttons:
@@ -128,11 +132,11 @@ func load_next_question() -> void:
 		bt.disabled = false 
 	
 	# RESET SKELLY: Clear the icon (or set it to a default idle texture if you have one)
-	$Skelly.icon = null 
+	$Skelly.icon = skelly_help 
 	
 	index += 1 
-	load_menu()
-	#load_quiz()
+	
+	load_quiz()
 func select_panel(panel: Panel) -> void: 
 	for p in $Control/Panel_holder.get_children():
 		if p == panel: 
@@ -150,3 +154,10 @@ func _on_change_scene_requested(target) -> void:
 	elif target is PackedScene:
 		print("Switching to preloaded scene...")
 		get_tree().change_scene_to_packed(target)
+
+
+func _on_skelly_pressed() -> void:
+	$Window.visible = true 
+
+func _on_book_pressed() -> void:
+	$Window.visible = false 

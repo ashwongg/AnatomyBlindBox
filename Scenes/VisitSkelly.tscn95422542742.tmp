@@ -23,6 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ivyyr")
+slide_duration = null
 
 [node name="LandingPage" type="TextureRect" parent="." unique_id=1325577685]
 layout_mode = 0
