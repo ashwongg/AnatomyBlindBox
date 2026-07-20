@@ -87,7 +87,6 @@ func _on_rib_cage_focus_entered() -> void:
 func _on_rib_cage_focus_exited() -> void:
 	$"rib cage".self_modulate.a = 1
 
-
 func _on_disco_mouse_entered() -> void:
 	$disco.icon = load("res://Assets/disco.png")
 	$disco.position.y = -200

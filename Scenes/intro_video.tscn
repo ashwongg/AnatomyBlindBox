@@ -9,25 +9,26 @@
 [ext_resource type="Texture2D" uid="uid://r7scthggw7g2" path="res://Assets/Intro Video/organ_rescue_intro_0006.png" id="7_ul5ax"]
 [ext_resource type="Texture2D" uid="uid://bt1ge1q3ux3q6" path="res://Assets/Intro Video/organ_rescue_intro_0007.png" id="8_sqt55"]
 [ext_resource type="Texture2D" uid="uid://g7cbnshq42am" path="res://Assets/Intro Video/organ_rescue_intro_0008.png" id="9_cyi6o"]
-[ext_resource type="Texture2D" uid="uid://bkhmp2xhe572o" path="res://Assets/Intro Video/organ_rescue_intro_0009.png" id="10_s6kv3"]
-[ext_resource type="Texture2D" uid="uid://8x8rqtv3higi" path="res://Assets/Intro Video/organ_rescue_intro_0010.png" id="11_fmx73"]
-[ext_resource type="Texture2D" uid="uid://d4ivq7pgsnuq2" path="res://Assets/Intro Video/organ_rescue_intro_0011.png" id="12_dsuqw"]
-[ext_resource type="Texture2D" uid="uid://bba6f74gltkud" path="res://Assets/Intro Video/organ_rescue_intro_0012.png" id="13_6dx0q"]
-[ext_resource type="Texture2D" uid="uid://o5n1hsuanf0x" path="res://Assets/Intro Video/organ_rescue_intro_0013.png" id="14_h4323"]
-[ext_resource type="Texture2D" uid="uid://c6e6hkl3hgqwv" path="res://Assets/Intro Video/organ_rescue_intro_0014.png" id="15_202xn"]
-[ext_resource type="Texture2D" uid="uid://bpgl6pak332xq" path="res://Assets/Intro Video/organ_rescue_intro_0015.png" id="16_ihkhw"]
-[ext_resource type="Texture2D" uid="uid://74u7we0bq16r" path="res://Assets/Intro Video/organ_rescue_intro_0016.png" id="17_tjekg"]
-[ext_resource type="Texture2D" uid="uid://bbhyf2xwia0kh" path="res://Assets/Intro Video/organ_rescue_intro_0017.png" id="18_a0c5i"]
-[ext_resource type="Texture2D" uid="uid://dcqbhyo7o18h0" path="res://Assets/Intro Video/organ_rescue_intro_0018.png" id="19_dh8mm"]
-[ext_resource type="Texture2D" uid="uid://dp3418akfx4wl" path="res://Assets/Intro Video/organ_rescue_intro_0019.png" id="20_34nrn"]
-[ext_resource type="Texture2D" uid="uid://bohivgmjtvofi" path="res://Assets/Intro Video/organ_rescue_intro_0020.png" id="21_ngohv"]
-[ext_resource type="Texture2D" uid="uid://bcwvyd1ckgmp4" path="res://Assets/Intro Video/organ_rescue_intro_0021.png" id="22_wf048"]
-[ext_resource type="Texture2D" uid="uid://bgm22b7ncv8aw" path="res://Assets/Intro Video/organ_rescue_intro_0022.png" id="23_3ob70"]
-[ext_resource type="Texture2D" uid="uid://b0riq0canvodr" path="res://Assets/Intro Video/organ_rescue_intro_0023.png" id="24_8bu6c"]
-[ext_resource type="Texture2D" uid="uid://cdrfvpqgajwwb" path="res://Assets/Intro Video/organ_rescue_intro_0024.png" id="25_odiar"]
-[ext_resource type="Texture2D" uid="uid://cenmg01hh54xj" path="res://Assets/Intro Video/organ_rescue_intro_0025.png" id="26_bt1n6"]
+[ext_resource type="Texture2D" uid="uid://ccriemhrecjif" path="res://Assets/Intro Video/organ_rescue_intro_0009.png" id="10_s6kv3"]
+[ext_resource type="Texture2D" uid="uid://cyuanik7l1464" path="res://Assets/Intro Video/organ_rescue_intro_0011.jpg" id="11_s07px"]
+[ext_resource type="Texture2D" uid="uid://cfo1m0es86ebv" path="res://Assets/Intro Video/organ_rescue_intro_00013.jpg" id="13_aapno"]
+[ext_resource type="Texture2D" uid="uid://wtbatwtv5h7n" path="res://Assets/Intro Video/organ_rescue_intro_00012.jpg" id="14_6q7kq"]
+[ext_resource type="Texture2D" uid="uid://de6y1qm7efg1c" path="res://Assets/Intro Video/organ_rescue_intro_00014.jpg" id="14_nc30s"]
+[ext_resource type="Texture2D" uid="uid://blnt6pr3ag3bb" path="res://Assets/Intro Video/organ_rescue_intro_0015.png" id="15_f2a5n"]
+[ext_resource type="Texture2D" uid="uid://dv8sqmesr7q1u" path="res://Assets/Intro Video/organ_rescue_intro_0016.png" id="16_ul5ax"]
+[ext_resource type="Texture2D" uid="uid://cxl6ehahxrvku" path="res://Assets/Intro Video/organ_rescue_intro_0017.png" id="17_sqt55"]
+[ext_resource type="Texture2D" uid="uid://c8v4rt1dh7dqv" path="res://Assets/Intro Video/organ_rescue_intro_0018.png" id="18_cyi6o"]
+[ext_resource type="Texture2D" uid="uid://db62rxvjimtrv" path="res://Assets/Intro Video/organ_rescue_intro_0019.png" id="19_s6kv3"]
+[ext_resource type="Texture2D" uid="uid://b5jqvfqk1hok7" path="res://Assets/Intro Video/organ_rescue_intro_0020.png" id="20_fmx73"]
+[ext_resource type="Texture2D" uid="uid://dhu2pc4evbu1w" path="res://Assets/Intro Video/organ_rescue_intro_0021.png" id="21_dsuqw"]
+[ext_resource type="Texture2D" uid="uid://bys7kgeecr4fq" path="res://Assets/Intro Video/organ_rescue_intro_0022.png" id="22_6dx0q"]
+[ext_resource type="Texture2D" uid="uid://cixvy13mxycoj" path="res://Assets/Intro Video/organ_rescue_intro_0023.png" id="23_h4323"]
+[ext_resource type="Texture2D" uid="uid://c7qhhs78yx36y" path="res://Assets/Intro Video/organ_rescue_intro_0024.png" id="24_202xn"]
+[ext_resource type="Texture2D" uid="uid://w8wl328niqqx" path="res://Assets/Intro Video/organ_rescue_intro_0025.png" id="25_ihkhw"]
+[ext_resource type="Texture2D" uid="uid://dflvtx6xhffds" path="res://Assets/Intro Video/organ_rescue_intro_0026.png" id="26_tjekg"]
+[ext_resource type="Texture2D" uid="uid://d13dd5ru0qge4" path="res://Assets/Intro Video/organ_rescue_intro_0027.png" id="27_a0c5i"]
 [ext_resource type="Texture2D" uid="uid://bolwl51rvfblo" path="res://Assets/next_arrow.png" id="27_p6nei"]
-[ext_resource type="Texture2D" uid="uid://bgfe4me374htp" path="res://Assets/Intro Video/organ_rescue_intro_0026.png" id="27_phc7p"]
+[ext_resource type="Texture2D" uid="uid://3fnmeg1x2asm" path="res://Assets/Intro Video/organ_rescue_intro_0028.png" id="28_dh8mm"]
 [ext_resource type="Texture2D" uid="uid://bxu02ny46qh5h" path="res://Assets/back_arrow.png" id="28_phc7p"]
 
 [node name="IntroVideo" type="Control" unique_id=486546096]
@@ -38,7 +39,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jsyq0")
-cutscene_images = Array[Texture2D]([ExtResource("2_cx6yl"), ExtResource("3_kk4q3"), ExtResource("4_aapno"), ExtResource("5_nc30s"), ExtResource("6_f2a5n"), ExtResource("7_ul5ax"), ExtResource("8_sqt55"), ExtResource("9_cyi6o"), ExtResource("10_s6kv3"), ExtResource("11_fmx73"), ExtResource("12_dsuqw"), ExtResource("13_6dx0q"), ExtResource("14_h4323"), ExtResource("15_202xn"), ExtResource("16_ihkhw"), ExtResource("17_tjekg"), ExtResource("18_a0c5i"), ExtResource("19_dh8mm"), ExtResource("20_34nrn"), ExtResource("21_ngohv"), ExtResource("22_wf048"), ExtResource("23_3ob70"), ExtResource("24_8bu6c"), ExtResource("25_odiar"), ExtResource("26_bt1n6"), ExtResource("27_phc7p")])
+cutscene_images = Array[Texture2D]([ExtResource("2_cx6yl"), ExtResource("3_kk4q3"), ExtResource("4_aapno"), ExtResource("5_nc30s"), ExtResource("6_f2a5n"), ExtResource("7_ul5ax"), ExtResource("8_sqt55"), ExtResource("9_cyi6o"), ExtResource("10_s6kv3"), ExtResource("11_s07px"), ExtResource("14_6q7kq"), ExtResource("13_aapno"), ExtResource("14_nc30s"), ExtResource("15_f2a5n"), ExtResource("16_ul5ax"), ExtResource("17_sqt55"), ExtResource("18_cyi6o"), ExtResource("19_s6kv3"), ExtResource("20_fmx73"), ExtResource("21_dsuqw"), ExtResource("22_6dx0q"), ExtResource("23_h4323"), ExtResource("24_202xn"), ExtResource("25_ihkhw"), ExtResource("26_tjekg"), ExtResource("27_a0c5i"), ExtResource("28_dh8mm")])
 
 [node name="CutsceneImage" type="TextureRect" parent="." unique_id=1410565637]
 layout_mode = 1

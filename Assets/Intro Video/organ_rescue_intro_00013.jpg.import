@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8x8rqtv3higi"
-path="res://.godot/imported/organ_rescue_intro_0010.png-d227a1a98623c754f3f446aecf80a137.ctex"
+uid="uid://cfo1m0es86ebv"
+path="res://.godot/imported/organ_rescue_intro_00013.jpg-300b0f2071cfa3b117704c677d8a315b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Intro Video/organ_rescue_intro_0010.png"
-dest_files=["res://.godot/imported/organ_rescue_intro_0010.png-d227a1a98623c754f3f446aecf80a137.ctex"]
+source_file="res://Assets/Intro Video/organ_rescue_intro_00013.jpg"
+dest_files=["res://.godot/imported/organ_rescue_intro_00013.jpg-300b0f2071cfa3b117704c677d8a315b.ctex"]
 
 [params]
 

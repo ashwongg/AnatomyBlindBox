@@ -15,6 +15,8 @@ var correct: int
 @onready var image: TextureRect = $Control/Image
 @onready var skelly_happy: Texture = load("res://Assets/Skelly-right.png")
 @onready var skelly_tryagain: Texture = load("res://Assets/Skelly-wrong.png")
+@onready var quizzard_happy: Texture = load("res://Assets/Quizzard-happy.png")
+@onready var quizzard_angry: Texture = load("res://Assets/Quizzard-angry.png")
 @onready var skelly_help: Texture = load("res://Assets/help.png")
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
@@ -102,15 +104,16 @@ func button_answer(button: Button) -> void:
 		# Correct Answer
 		button.modulate = color_right 
 		GlobalVariables.tokens += 1
-		
-		# FIX: Change the icon property instead of drawing
+	
 		$Skelly.icon = skelly_happy
+		$Quizzard.icon = quizzard_angry
 		
 		$Label.text = " " + str(GlobalVariables.tokens)
 	else: 
 		# Wrong Answer - Highlight chosen button as wrong
 		# FIX: Change the icon property instead of drawing
 		$Skelly.icon = skelly_tryagain
+		$Quizzard.icon = quizzard_happy
 		
 		button.modulate = color_wrong
 		
@@ -133,6 +136,7 @@ func load_next_question() -> void:
 	
 	# RESET SKELLY: Clear the icon (or set it to a default idle texture if you have one)
 	$Skelly.icon = skelly_help 
+	$Quizzard.icon = quizzard_happy 
 	
 	index += 1 
 	

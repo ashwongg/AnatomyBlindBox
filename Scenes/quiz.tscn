@@ -9,9 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dcxeaumbwoyvj" path="res://Assets/Questions_images/Liver.png" id="5_gpq0x"]
 [ext_resource type="Resource" uid="uid://cw7j5xmmjjwrv" path="res://resources/questions/question_6.tres" id="7_28c1y"]
 [ext_resource type="Resource" uid="uid://bevcbs5ndcc6b" path="res://resources/questions/question_7.tres" id="8_esplf"]
-[ext_resource type="Texture2D" uid="uid://5d70iwja6lqm" path="res://Assets/quiz page.jpg" id="10_u0t0f"]
+[ext_resource type="Texture2D" uid="uid://8mqkwcuea8h4" path="res://Assets/Quiz Page_blank.jpg" id="10_u0t0f"]
 [ext_resource type="Texture2D" uid="uid://cokbdx3bnlhkr" path="res://Assets/icons/CellNumber.png" id="11_b1cha"]
 [ext_resource type="Texture2D" uid="uid://dy1h7w7717mv0" path="res://Assets/icons/Menu_1.png" id="12_rdenf"]
+[ext_resource type="Texture2D" uid="uid://ca2fmc68wy3b1" path="res://Assets/Quizzard-happy.png" id="13_e7trm"]
 [ext_resource type="Texture2D" uid="uid://dicdg3lgetosg" path="res://Assets/help.png" id="13_u0t0f"]
 [ext_resource type="Texture2D" uid="uid://kw4leql7hihs" path="res://Assets/book.png" id="14_b1cha"]
 
@@ -100,6 +101,21 @@ grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 theme_override_colors/font_color = Color(0.98039216, 0.6431373, 0.11372549, 1)
 icon = ExtResource("13_u0t0f")
+flat = true
+
+[node name="Quizzard" type="Button" parent="." unique_id=1164620253]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 984.00006
+offset_top = 413.0
+offset_right = 2066.0
+offset_bottom = 1511.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_colors/font_color = Color(0.98039216, 0.6431373, 0.11372549, 1)
+icon = ExtResource("13_e7trm")
 flat = true
 
 [node name="Window" type="Window" parent="." unique_id=494564180]
@@ -284,4 +300,5 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [connection signal="pressed" from="Skelly" to="." method="_on_skelly_pressed"]
+[connection signal="pressed" from="Quizzard" to="." method="_on_skelly_pressed"]
 [connection signal="pressed" from="Window/book" to="." method="_on_book_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5jqvfqk1hok7"
-path="res://.godot/imported/organ_rescue_intro_0020.png-0821a0609da240e022675c4f6ce8a164.ctex"
+uid="uid://cq7yluvv3dqsj"
+path="res://.godot/imported/Skelly Help_glasses.png-fa13c12c314c4620a28a0b7af4c87aa6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Intro Video/organ_rescue_intro_0020.png"
-dest_files=["res://.godot/imported/organ_rescue_intro_0020.png-0821a0609da240e022675c4f6ce8a164.ctex"]
+source_file="res://Assets/Skelly Help_glasses.png"
+dest_files=["res://.godot/imported/Skelly Help_glasses.png-fa13c12c314c4620a28a0b7af4c87aa6.ctex"]
 
 [params]
 
