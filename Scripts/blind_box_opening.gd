@@ -51,11 +51,6 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void: 
 	rng.randomize()
-	$Label.text = " " + str(GlobalVariables.tokens)
-	$Menu.pressed.connect(_on_change_scene_requested.bind("res://Scenes/main.tscn"))
-	$Cards.pressed.connect(_on_change_scene_requested.bind("res://Scenes/TradingCard.tscn"))
-	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
-	$"Play Game".pressed.connect(_on_change_scene_requested.bind("res://Scenes/quiz.tscn"))
 	
 	if GlobalVariables.played_ending_cutscene == true: 
 		$closing_movie.visible = true
@@ -66,26 +61,15 @@ func _on_change_scene_requested(target: String) -> void:
 	else:
 		get_tree().change_scene_to_file(target)
 
-
-func _on_open_box_pressed() -> void:
 	$OpenBox.hide()
 	if GlobalVariables.tokens <= 0: 
 		$exchange.show()
 		return # Stop execution early if they don't have enough tokens
 		
 	GlobalVariables.tokens -= 1 
-	$Label.text = " " + str(GlobalVariables.tokens)
-	
-	#Hide everything cause im too lazy to make another scene
-	$"Click to Open".visible = false 
-	$"Play Game".visible = false 
-	$Cards.visible = false 
-	$visitSkelly.visible = false 
-	$Menu.visible = false
 	
 	var roll = rng.randi_range(1, 16)
-	#var prize_data = rewards[roll]
-	var prize_data = rewards[16]
+	var prize_data = rewards[roll]
 	
 	# Determine which sprite node to play based on the reward data
 	var active_anim = prize_data["node"]
@@ -94,7 +78,6 @@ func _on_open_box_pressed() -> void:
 	placeholder_openbox.hide()
 	heart_openbox.hide()
 	
-
 	active_anim.show()
 	active_anim.stop() # Reset the animation player state completely
 	active_anim.frame = 0 
@@ -125,12 +108,6 @@ func _on_open_box_pressed() -> void:
 func _on_show_prize_pressed() -> void:
 	$OpenBox.show()
 	popup2.hide()
-	$"Click to Open".visible = true
-	$"Play Game".visible = true 
-	$Cards.visible = true 
-	$visitSkelly.visible = true 
-	$Menu.visible = true
-	
 
 
 func _on_closing_movie_pressed() -> void:
