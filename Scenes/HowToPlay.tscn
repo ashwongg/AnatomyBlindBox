@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://h04dijctqq6r" path="res://Scenes/how_to_play.gd" id="1_gmf7q"]
 [ext_resource type="Texture2D" uid="uid://dhg7lnfonicfs" path="res://Assets/how_to_play_page.png" id="2_gmf7q"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_r8rx6"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="4_r8rx6"]
 
 [node name="HowToPlay" type="Control" unique_id=2126481693]
 layout_mode = 3
@@ -31,5 +32,7 @@ offset_bottom = 720.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_r8rx6")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("4_r8rx6")]
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

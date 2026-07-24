@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cmfiqlgbwdr6i"]
+
+[ext_resource type="AudioStream" uid="uid://m2ef1v0ur0jy" path="res://Music/the_mountain-children-522447.mp3" id="1_pihmh"]
+
+[node name="BGMManager" type="AudioStreamPlayer" unique_id=1625291609]
+stream = ExtResource("1_pihmh")
+autoplay = true

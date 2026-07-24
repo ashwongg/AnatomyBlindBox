@@ -5,6 +5,11 @@ extends Control
 
 
 func _ready():
+	
+	$BGMManager.stop()
+	$BGMManager.stream = load("res://Music/djartmusic-fun-with-my-8-bit-game-301278.mp3")
+	$BGMManager.play()
+	
 	ResourceLoader.load_threaded_request("res://Scenes/blind_box.tscn")
 	ResourceLoader.load_threaded_request("res://Scenes/VisitSkelly.tscn")
 	

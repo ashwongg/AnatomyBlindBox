@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://culci1l74h4m8" path="res://Assets/Intro Video/Closing scene-17.png" id="6_8i82x"]
 [ext_resource type="Texture2D" uid="uid://dees2fugmm73s" path="res://Assets/Intro Video/Closing scene-18.png" id="7_f7bmv"]
 [ext_resource type="Texture2D" uid="uid://cdgbdbwo7548m" path="res://Assets/Intro Video/Closing scene-19.png" id="8_a76fr"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="11_s158c"]
 
 [node name="ClosingVideo" type="Control" unique_id=486546096]
 layout_mode = 3
@@ -48,3 +49,5 @@ offset_bottom = 730.0
 scale = Vector2(0.7, 0.7)
 icon = ExtResource("3_kwmmn")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("11_s158c")]

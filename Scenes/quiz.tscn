@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://ca2fmc68wy3b1" path="res://Assets/Quizzard-happy.png" id="13_e7trm"]
 [ext_resource type="Texture2D" uid="uid://dicdg3lgetosg" path="res://Assets/help.png" id="13_u0t0f"]
 [ext_resource type="Texture2D" uid="uid://kw4leql7hihs" path="res://Assets/book.png" id="14_b1cha"]
+[ext_resource type="AudioStream" uid="uid://bhfq3dl2tkyhc" path="res://Music/dragon-studio-correct-472358.mp3" id="16_esplf"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="16_hwe6j"]
+[ext_resource type="AudioStream" uid="uid://c7fooin02rp2x" path="res://Music/lesiakower-error-mistake-sound-effect-incorrect-answer-437420.mp3" id="17_n4boq"]
 
 [sub_resource type="Resource" id="Resource_e7trm"]
 script = ExtResource("2_84grc")
@@ -298,6 +301,14 @@ theme_override_constants/line_spacing = 10
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="SFXRight" type="AudioStreamPlayer" parent="." unique_id=217667569]
+stream = ExtResource("16_esplf")
+
+[node name="SFXWrong" type="AudioStreamPlayer" parent="." unique_id=435645755]
+stream = ExtResource("17_n4boq")
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("16_hwe6j")]
 
 [connection signal="pressed" from="Skelly" to="." method="_on_skelly_pressed"]
 [connection signal="pressed" from="Quizzard" to="." method="_on_skelly_pressed"]

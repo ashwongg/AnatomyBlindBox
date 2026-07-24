@@ -20,13 +20,20 @@ var correct: int
 @onready var skelly_help: Texture = load("res://Assets/help.png")
 @onready var no_image: Texture = load("res://Assets/Questions_images/no_image.png")
 
+@onready var sfx_right: AudioStreamPlayer = $SFXRight
+@onready var sfx_wrong: AudioStreamPlayer = $SFXWrong
+
 const BLIND_BOX_SCENE = preload("res://Scenes/blind_box.tscn")
-# RE-ADDED: Reference your Back button node safely
 @onready var back_button: Button = get_node_or_null("Back")
 
 var shuffled_collection: Array = []
 
 func _ready() -> void: 
+	
+	$BGMManager.stop()
+	$BGMManager.stream = load("res://Music/tunetank-children-funny-music-348022.mp3")
+	$BGMManager.play()
+	
 	if quiz_c == null:
 		push_error("CRITICAL: You forgot to assign a Question_collection resource to quiz_c in the Inspector!")
 		return
@@ -102,6 +109,7 @@ func button_answer(button: Button) -> void:
 	
 	if button_index != -1 and correct_answer_text == labels[button_index].text: 
 		# Correct Answer
+		sfx_right.play()
 		button.modulate = color_right 
 		GlobalVariables.tokens += 1
 	
@@ -112,6 +120,8 @@ func button_answer(button: Button) -> void:
 	else: 
 		# Wrong Answer - Highlight chosen button as wrong
 		# FIX: Change the icon property instead of drawing
+		sfx_wrong.play()
+		shake_button(button)
 		$Skelly.icon = skelly_tryagain
 		$Quizzard.icon = quizzard_happy
 		
@@ -151,6 +161,18 @@ func select_panel(panel: Panel) -> void:
 func load_menu() -> void: 
 	get_tree().change_scene_to_packed(BLIND_BOX_SCENE)
 
+func shake_button(button: Button) -> void:
+	# Store the exact starting position so it resets perfectly afterward
+	var original_pos = button.position
+	var shake_tween = create_tween()
+	
+	# Configure the tween to run multiple movements sequentially
+	# Moves left, right, left, right, and then returns to the center
+	shake_tween.tween_property(button, "position:x", original_pos.x - 15, 0.05)
+	shake_tween.tween_property(button, "position:x", original_pos.x + 15, 0.05)
+	shake_tween.tween_property(button, "position:x", original_pos.x - 10, 0.05)
+	shake_tween.tween_property(button, "position:x", original_pos.x + 10, 0.05)
+	shake_tween.tween_property(button, "position:x", original_pos.x, 0.05)
 
 func _on_change_scene_requested(target) -> void:
 	if target is String and target == "QUIT":

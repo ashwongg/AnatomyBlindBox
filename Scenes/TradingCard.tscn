@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://7f7nx4r1y7gi" path="res://Assets/trading cards.png" id="1_oxvuh"]
 [ext_resource type="Script" uid="uid://dernfftkgtuhp" path="res://Scripts/trading_card.gd" id="1_xop4a"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_72lva"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="4_7anjc"]
 
 [node name="TradingCard" type="Control" unique_id=792337902]
 layout_mode = 3
@@ -184,6 +185,8 @@ offset_bottom = 724.0
 theme_override_font_sizes/font_size = 42
 icon = ExtResource("3_72lva")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("4_7anjc")]
 
 [connection signal="pressed" from="HeartCard" to="." method="_on_heart_card_pressed"]
 [connection signal="pressed" from="Rare_HeartCard" to="." method="_on_rare_heart_card_pressed"]

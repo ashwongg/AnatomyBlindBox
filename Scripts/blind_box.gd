@@ -84,6 +84,7 @@ func _on_route_requested(destination: String) -> void:
 
 func _on_open_box_pressed() -> void:
 	if GlobalVariables.tokens <= 0: 
+		$spr_Idle_Box.hide() 	
 		$exchange.show()
 		return
 		

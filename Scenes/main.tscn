@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://hmnoiarujn4o" path="res://Assets/Buttons/How_To_Play.png" id="6_21xkr"]
 [ext_resource type="Texture2D" uid="uid://bq6hy6qxnp4d8" path="res://Assets/icons/movie.png" id="7_6bp64"]
 [ext_resource type="Texture2D" uid="uid://bl4mxn1o2x53k" path="res://Assets/unlock_all.png" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="9_ynf5e"]
 
 [node name="Control" type="Control" unique_id=1116984972]
 layout_mode = 3
@@ -108,5 +109,7 @@ offset_bottom = 683.0
 rotation = 0.30543262
 icon = ExtResource("7_6bp64")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("9_ynf5e")]
 
 [connection signal="pressed" from="unlockALL" to="." method="_on_unlock_all_pressed"]

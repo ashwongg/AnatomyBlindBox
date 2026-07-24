@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://c4sh6nwg1rhls" path="res://Assets/exchange.png" id="22_yfnxr"]
 [ext_resource type="Texture2D" uid="uid://ogtpgq6wb6j1" path="res://Assets/SpriteSheets/BoxOpening_SmallIntestines_basic_SS.png" id="24_xipym"]
 [ext_resource type="Texture2D" uid="uid://bq6hy6qxnp4d8" path="res://Assets/icons/movie.png" id="28_5bpuu"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="29_thkq0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vota8"]
 atlas = ExtResource("10_thkq0")
@@ -6276,6 +6277,8 @@ offset_bottom = 758.0
 scale = Vector2(0.75, 0.75)
 icon = ExtResource("28_5bpuu")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("29_thkq0")]
 
 [connection signal="focus_entered" from="OpenBox" to="." method="_on_open_box_focus_entered"]
 [connection signal="mouse_entered" from="OpenBox" to="." method="_on_open_box_focus_entered"]

@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bolwl51rvfblo" path="res://Assets/next_arrow.png" id="27_p6nei"]
 [ext_resource type="Texture2D" uid="uid://3fnmeg1x2asm" path="res://Assets/Intro Video/organ_rescue_intro_0028.png" id="28_dh8mm"]
 [ext_resource type="Texture2D" uid="uid://bxu02ny46qh5h" path="res://Assets/back_arrow.png" id="28_phc7p"]
+[ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="31_nc30s"]
 
 [node name="IntroVideo" type="Control" unique_id=486546096]
 layout_mode = 3
@@ -68,3 +69,5 @@ offset_bottom = 730.0
 scale = Vector2(0.7, 0.7)
 icon = ExtResource("28_phc7p")
 flat = true
+
+[node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("31_nc30s")]
