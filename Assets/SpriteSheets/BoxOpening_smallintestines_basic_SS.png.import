@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd8v2blbu6j4q"
-path="res://.godot/imported/BoxOpening_smallintestines_basic_SS.png-fbc8e61f91c8ae8926bf5e3139bab823.ctex"
+uid="uid://ogtpgq6wb6j1"
+path="res://.godot/imported/BoxOpening_SmallIntestines_basic_SS.png-ffa1e6f078732074f0d6446d2612de63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_smallintestines_basic_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_smallintestines_basic_SS.png-fbc8e61f91c8ae8926bf5e3139bab823.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_SmallIntestines_basic_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_SmallIntestines_basic_SS.png-ffa1e6f078732074f0d6446d2612de63.ctex"]
 
 [params]
 

@@ -57,35 +57,35 @@ func slide_node_to(node: Control, target_pos: Vector2) -> void:
 	tween.tween_property(node, "position", target_pos, slide_duration)
 
 func _on_brain_pressed() -> void:
-	slide_node_to($brain, Vector2(313, 32))
+	slide_node_to($brain, Vector2(349.0, 29.0))
 
 func _on_heart_pressed() -> void:
-	slide_node_to($heart, Vector2(309, 337))
+	slide_node_to($heart, Vector2(348.0, 366.0))
 	
 func _on_liver_pressed() -> void:
-	slide_node_to($liver, Vector2(323, 411))
+	slide_node_to($liver, Vector2(344.0, 442.0))
 
 func _on_kidneys_pressed() -> void:
-	slide_node_to($R_Kidney, Vector2(426, 507))
-	slide_node_to($L_Kidney, Vector2(281, 515))
+	slide_node_to($R_Kidney, Vector2(471.0, 528.0))
+	slide_node_to($L_Kidney, Vector2(323.0, 531.0))
 
 func _on_sm_intestine_pressed() -> void:
-	slide_node_to($"small intestine", Vector2(324, 505))
+	slide_node_to($"small intestine", Vector2(355.0, 540.0))
 	
 func _on_lrg_intestine_pressed() -> void:
-	slide_node_to($"large intestine", Vector2(299, 497))
+	slide_node_to($"large intestine", Vector2(327.0, 546.0))
 	
 func _on_stomach_pressed() -> void:
-	slide_node_to($stomach, Vector2(345, 412))
+	slide_node_to($stomach, Vector2(376.0, 464.0))
 	
 func _on_lung_pressed() -> void:
-	slide_node_to($lungs, Vector2(291,346))
+	slide_node_to($lungs, Vector2(324.0,343.0))
 	
 func _on_rib_cage_focus_entered() -> void:
 	$"rib cage".self_modulate.a = 0
 
 func _on_rib_cage_focus_exited() -> void:
-	$"rib cage".self_modulate.a = 1
+	$"rib cage".self_modulate.a = 0.8
 
 func _on_disco_mouse_entered() -> void:
 	$disco.icon = load("res://Assets/disco.png")

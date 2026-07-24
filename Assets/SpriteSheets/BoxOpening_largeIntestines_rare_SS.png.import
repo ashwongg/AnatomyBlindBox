@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://88x14pdpv10i"
-path="res://.godot/imported/boxOpen_v05_sprite.png-5eca1000c84aee0c3307c3bf99a21b6e.ctex"
+uid="uid://tojjayehjewm"
+path="res://.godot/imported/BoxOpening_largeIntestines_rare_SS.png-daf5558e2755374735fba87238547cad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/boxOpen_v05_sprite.png"
-dest_files=["res://.godot/imported/boxOpen_v05_sprite.png-5eca1000c84aee0c3307c3bf99a21b6e.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_largeIntestines_rare_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_largeIntestines_rare_SS.png-daf5558e2755374735fba87238547cad.ctex"]
 
 [params]
 

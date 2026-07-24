@@ -202,4 +202,3 @@ flat = true
 [connection signal="pressed" from="Large_IntestineCard" to="." method="_on_large_intestine_card_pressed"]
 [connection signal="pressed" from="Rare_Large_IntestineCard" to="." method="_on_rare_large_intestine_card_pressed"]
 [connection signal="pressed" from="show_BackCard" to="." method="_on_show_back_card_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c43txqrnxn4v4"
-path="res://.godot/imported/BoxOpening_kidneys_rare_nononsense_SS.png-31d2dbd99c6d68cad87c1b05d0302403.ctex"
+uid="uid://comdav62ir3bf"
+path="res://.godot/imported/BoxOpening_lungs_rare_SS.png-7e8e824b20a12f4bd8a1c40241fe7ac8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_kidneys_rare_nononsense_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_kidneys_rare_nononsense_SS.png-31d2dbd99c6d68cad87c1b05d0302403.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_lungs_rare_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_lungs_rare_SS.png-7e8e824b20a12f4bd8a1c40241fe7ac8.ctex"]
 
 [params]
 

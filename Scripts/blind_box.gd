@@ -2,81 +2,97 @@ extends Control
 
 @onready var popup2 = $You_Got 
 @onready var openbox = $OpenBox
-
 @onready var placeholder_openbox = $spr_PlaceholderOpenBox
-
-@onready var heart_openbox = $spr_HeartOpenBox_Common
-@onready var brain_openbox = $spr_BrainOpenBox_Common
-@onready var kidney_openbox = $spr_KidneyOpenBox_Common
-@onready var liver_openbox = $spr_LiverOpenBox_Common
-@onready var lungs_openbox = $spr_LungsOpenBox_Common
-@onready var sml_intestine_openbox = $spr_SmlIntesOpenBox_Common
-@onready var lrg_intestine_openbox = $spr_LrgIntesOpenBox_Common
-@onready var stomach_openbox = $spr_StomachOpenBox_Common
-
-@onready var heart_openbox_rare = $spr_HeartOpenBox_Rare
-@onready var brain_openbox_rare = $spr_BrainOpenBox_Rare
-@onready var kidney_openbox_rare = $spr_KidneyOpenBox_Rare
-@onready var liver_openbox_rare = $spr_LiverOpenBox_Rare
-@onready var lungs_openbox_rare = $spr_LungsOpenBox_Rare
-@onready var sml_intestine_openbox_rare = $spr_SmlIntesOpenBox_Rare
-@onready var lrg_intestine_openbox_rare = $spr_LrgIntesOpenBox_Rare
-@onready var stomach_openbox_rare = $spr_StomachOpenBox_Rare
-
+@onready var idle_box = $spr_Idle_Box
 @onready var show_prize = $You_Got/show_prize
 
-# We can store the reward data cleanly in a Dictionary structure
-# Add @onready here so it can reference the sprite nodes below
-@onready var rewards = {
-	1:  {"node": brain_openbox, "global_var": "has_brain", "texture": "res://Assets/Trading Cards/F_Basic_Brain.png"},
-	2:  {"node": heart_openbox, "global_var": "has_heart", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png"},
-	3:  {"node": kidney_openbox, "global_var": "has_kidneys", "texture": "res://Assets/Trading Cards/F_Basic_Kidney.png"},
-	4:  {"node": liver_openbox, "global_var": "has_liver", "texture": "res://Assets/Trading Cards/F_Basic_Liver.png"},
-	5:  {"node": lrg_intestine_openbox, "global_var": "has_largeintestines", "texture": "res://Assets/Trading Cards/F_Basic_LargeIntestine.png"},
-	6:  {"node": sml_intestine_openbox, "global_var": "has_smallintestines", "texture": "res://Assets/Trading Cards/F_Basic_SmallIntestines.png"},
-	7:  {"node": lungs_openbox, "global_var": "has_lungs", "texture": "res://Assets/Trading Cards/F_Basic_Lung.png"},
-	8:  {"node": stomach_openbox, "global_var": "has_stomach", "texture": "res://Assets/Trading Cards/F_Basic_Stomach.png"},
-	# Rare Organs
-	9:  {"node": brain_openbox_rare, "global_var": "has_rare_brain", "texture": "res://Assets/Trading Cards/F_Rare_Brain.png"},
-	10: {"node": heart_openbox_rare, "global_var": "has_rare_heart", "texture": "res://Assets/Trading Cards/F_Rare_Heart.png"},
-	11: {"node": kidney_openbox_rare, "global_var": "has_rare_kidneys", "texture": "res://Assets/Trading Cards/F_Rare_Kidney.png"},
-	12: {"node": liver_openbox_rare, "global_var": "has_rare_liver", "texture": "res://Assets/Trading Cards/F_Rare_Liver.png"},
-	13: {"node": lrg_intestine_openbox_rare, "global_var": "has_rare_largeintestines", "texture": "res://Assets/Trading Cards/F_Rare_LargeIntestine.png"},
-	14: {"node": sml_intestine_openbox_rare, "global_var": "has_rare_smallintestines", "texture": "res://Assets/Trading Cards/F_Rare_SmallIntestines.png"},
-	15: {"node": lungs_openbox_rare, "global_var": "has_rare_lungs", "texture": "res://Assets/Trading Cards/F_Rare_Lung.png"},
-	16: {"node": stomach_openbox_rare, "global_var": "has_rare_stomach", "texture": "res://Assets/Trading Cards/F_Rare_Stomach.png"}
-}
+# OPTIMIZATION: One single AnimatedSprite2D node to handle all 16 variations!
+@onready var organ_opener: AnimatedSprite2D = $spr_OrganOpener
 
+# Fast Runtime Scene Memory Variables
+var trading_card_scene: PackedScene
+var quiz_scene: PackedScene
+var skelly_scene: PackedScene
+var main_menu_scene: PackedScene
+
+# Clear configuration mapping animation names instead of separate nodes
+@onready var rewards = {
+	1:  {"anim_name": "is_brain_basic", "global_var": "has_brain", "texture": "res://Assets/Trading Cards/F_Basic_Brain.png"},
+	2:  {"anim_name": "is_heart_basic", "global_var": "has_heart", "texture": "res://Assets/Trading Cards/F_Basic_Heart.png"},
+	3:  {"anim_name": "is_kidneys_basic", "global_var": "has_kidneys", "texture": "res://Assets/Trading Cards/F_Basic_Kidney.png"},
+	4:  {"anim_name": "is_liver_basic", "global_var": "has_liver", "texture": "res://Assets/Trading Cards/F_Basic_Liver.png"},
+	5:  {"anim_name": "is_lrgintestine_basic", "global_var": "has_largeintestines", "texture": "res://Assets/Trading Cards/F_Basic_LargeIntestine.png"},
+	6:  {"anim_name": "is_smlintestine_basic", "global_var": "has_smallintestines", "texture": "res://Assets/Trading Cards/F_Basic_SmallIntestines.png"},
+	7:  {"anim_name": "is_lungs_basic", "global_var": "has_lungs", "texture": "res://Assets/Trading Cards/F_Basic_Lung.png"},
+	8:  {"anim_name": "is_stomach_basic", "global_var": "has_stomach", "texture": "res://Assets/Trading Cards/F_Basic_Stomach.png"},
+	# Rare Organs
+	9:  {"anim_name": "is_brain_rare", "global_var": "has_rare_brain", "texture": "res://Assets/Trading Cards/F_Rare_Brain.png"},
+	10: {"anim_name": "is_heart_rare", "global_var": "has_rare_heart", "texture": "res://Assets/Trading Cards/F_Rare_Heart.png"},
+	11: {"anim_name": "is_kidneys_rare", "global_var": "has_rare_kidneys", "texture": "res://Assets/Trading Cards/F_Rare_Kidney.png"},
+	12: {"anim_name": "is_liver_rare", "global_var": "has_rare_liver", "texture": "res://Assets/Trading Cards/F_Rare_Liver.png"},
+	13: {"anim_name": "is_lrgintestine_rare", "global_var": "has_rare_largeintestines", "texture": "res://Assets/Trading Cards/F_Rare_LargeIntestine.png"},
+	14: {"anim_name": "is_smlintestine_rare", "global_var": "has_rare_smallintestines", "texture": "res://Assets/Trading Cards/F_Rare_SmallIntestines.png"},
+	15: {"anim_name": "is_lungs_rare", "global_var": "has_rare_lungs", "texture": "res://Assets/Trading Cards/F_Rare_Lung.png"},
+	16: {"anim_name": "is_stomach_rare", "global_var": "has_rare_stomach", "texture": "res://Assets/Trading Cards/F_Rare_Stomach.png"}
+}
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void: 
+	
 	rng.randomize()
 	$Label.text = " " + str(GlobalVariables.tokens)
-	$Menu.pressed.connect(_on_change_scene_requested.bind("res://Scenes/main.tscn"))
-	$Cards.pressed.connect(_on_change_scene_requested.bind("res://Scenes/TradingCard.tscn"))
-	$visitSkelly.pressed.connect(_on_change_scene_requested.bind("res://Scenes/VisitSkelly.tscn"))
-	$"Play Game".pressed.connect(_on_change_scene_requested.bind("res://Scenes/quiz.tscn"))
+	
+	# Cache scenes into RAM immediately upon loading this menu
+	trading_card_scene = load("res://Scenes/TradingCard.tscn")
+	quiz_scene = load("res://Scenes/quiz.tscn")
+	skelly_scene = load("res://Scenes/VisitSkelly.tscn")
+	main_menu_scene = load("res://Scenes/main.tscn")
+	
+	# Clear connected dynamic scene button triggers
+	$Menu.pressed.connect(_on_route_requested.bind("main"))
+	$Cards.pressed.connect(_on_route_requested.bind("cards"))
+	$visitSkelly.pressed.connect(_on_route_requested.bind("skelly"))
+	$"Play Game".pressed.connect(_on_route_requested.bind("quiz"))
+	
+	# Prevent click focus lockouts on frame 1
+	$OpenBox.focus_mode = Control.FOCUS_NONE
+	$OpenBox.move_to_front() 
+	$OpenBox.grab_click_focus()
 	
 	if GlobalVariables.played_ending_cutscene == true: 
 		$closing_movie.visible = true
 
-func _on_change_scene_requested(target: String) -> void:
-	if target == "QUIT":
-		get_tree().quit()
+func _on_route_requested(destination: String) -> void:
+	var target_packed: PackedScene = null
+	match destination:
+		"main": target_packed = main_menu_scene
+		"cards": target_packed = trading_card_scene
+		"skelly": target_packed = skelly_scene
+		"quiz": target_packed = quiz_scene
+		
+	if target_packed != null:
+		get_tree().change_scene_to_packed(target_packed)
 	else:
-		get_tree().change_scene_to_file(target)
-
+		# Dynamic fallback route if resources weren't fully loaded
+		var paths = {
+			"main": "res://Scenes/main.tscn",
+			"cards": "res://Scenes/TradingCard.tscn",
+			"skelly": "res://Scenes/VisitSkelly.tscn",
+			"quiz": "res://Scenes/quiz.tscn"
+		}
+		get_tree().change_scene_to_file(paths[destination])
 
 func _on_open_box_pressed() -> void:
-	$OpenBox.hide()
 	if GlobalVariables.tokens <= 0: 
 		$exchange.show()
-		return # Stop execution early if they don't have enough tokens
+		return
 		
+	$OpenBox.hide()
+	$spr_Idle_Box.hide() 	
 	GlobalVariables.tokens -= 1 
 	$Label.text = " " + str(GlobalVariables.tokens)
 	
-	#Hide everything cause im too lazy to make another scene
+	# Hide background elements cleanly
 	$"Click to Open".visible = false 
 	$"Play Game".visible = false 
 	$Cards.visible = false 
@@ -84,54 +100,49 @@ func _on_open_box_pressed() -> void:
 	$Menu.visible = false
 	
 	var roll = rng.randi_range(1, 16)
-	#var prize_data = rewards[roll]
-	var prize_data = rewards[16]
+	var prize_data = rewards[roll]
 	
-	# Determine which sprite node to play based on the reward data
-	var active_anim = prize_data["node"]
-	
-	# Safeguard: Ensure the animations start clean
+	# Clear static placeholders
 	placeholder_openbox.hide()
-	heart_openbox.hide()
 	
-
-	active_anim.show()
-	active_anim.stop() # Reset the animation player state completely
-	active_anim.frame = 0 
-	active_anim.play()
+	# Configure single animator node to run specific target animation block
+	organ_opener.show()
+	organ_opener.stop()
+	organ_opener.animation = prize_data["anim_name"]
+	organ_opener.frame = 0 
+	organ_opener.play()
 	
-	# Wait for animation to finish
-	await active_anim.animation_finished
+	# Process layout timing sequences cleanly
+	await organ_opener.animation_finished
 	await get_tree().create_timer(1.0).timeout
+	organ_opener.hide()
 	
-	active_anim.hide()
-	
-	# Dynamically set the Global variable flag using set()
+	# Flag global collections tracking lists
 	GlobalVariables.set(prize_data["global_var"], true)
 	
+	# Check overall tier completions flags updates
 	if GlobalVariables.has_brain and GlobalVariables.has_heart and GlobalVariables.has_kidneys and GlobalVariables.has_lungs and GlobalVariables.has_stomach and GlobalVariables.has_largeintestines and GlobalVariables.has_smallintestines and GlobalVariables.has_liver: 
 		GlobalVariables.all_common_organs_collected = true
-
 		if GlobalVariables.played_ending_cutscene == false: 
 			GlobalVariables.played_ending_cutscene = true
 			get_tree().change_scene_to_file("res://Scenes/closing_video.tscn")
 	
-		
-	# Load and apply texture dynamically
+	# Update prize graphics overlays windows layouts
 	show_prize.texture_normal = load(prize_data["texture"])
 	$You_Got.show()
 
-
 func _on_show_prize_pressed() -> void:
 	$OpenBox.show()
+	$OpenBox.move_to_front()
+	$spr_Idle_Box.show()
+	$spr_Idle_Box.play("idle_box")
+	
 	popup2.hide()
 	$"Click to Open".visible = true
 	$"Play Game".visible = true 
 	$Cards.visible = true 
 	$visitSkelly.visible = true 
 	$Menu.visible = true
-	
-
 
 func _on_closing_movie_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/closing_video.tscn")

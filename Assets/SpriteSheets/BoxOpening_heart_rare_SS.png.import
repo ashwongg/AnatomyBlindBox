@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rmit13hjq64o"
-path="res://.godot/imported/BoxOpening_brain_SS.png-799722791a70a9409442a8befc08c114.ctex"
+uid="uid://dkj02q5o135m2"
+path="res://.godot/imported/BoxOpening_heart_rare_SS.png-1e1774c46d0c4ddfa38d91981b280b67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_brain_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_brain_SS.png-799722791a70a9409442a8befc08c114.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_heart_rare_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_heart_rare_SS.png-1e1774c46d0c4ddfa38d91981b280b67.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vuaykaqibtdb"
-path="res://.godot/imported/BoxOpening_largeintestines_rare_jaded_SS.png-4075a6f185c7026c59d14cda4b921a90.ctex"
+uid="uid://ctsrpad3rjmag"
+path="res://.godot/imported/BoxOpening_brain_basic_SS.png-a8d1f987b108a501a4c7c483d660c961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_largeintestines_rare_jaded_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_largeintestines_rare_jaded_SS.png-4075a6f185c7026c59d14cda4b921a90.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_brain_basic_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_brain_basic_SS.png-a8d1f987b108a501a4c7c483d660c961.ctex"]
 
 [params]
 

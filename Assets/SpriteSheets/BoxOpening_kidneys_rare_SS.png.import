@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whyxkeqof5r8"
-path="res://.godot/imported/BoxOpening_smallintestines_rare_picky_SS.png-36c0e22c2eea206caf596af1419a8e26.ctex"
+uid="uid://cnx3snlmlr8pr"
+path="res://.godot/imported/BoxOpening_kidneys_rare_SS.png-09e50198404f7cbdd88475c00f2dd292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_smallintestines_rare_picky_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_smallintestines_rare_picky_SS.png-36c0e22c2eea206caf596af1419a8e26.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_kidneys_rare_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_kidneys_rare_SS.png-09e50198404f7cbdd88475c00f2dd292.ctex"]
 
 [params]
 

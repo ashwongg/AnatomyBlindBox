@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djjrsb8es5v41"
-path="res://.godot/imported/BoxOpening_heart_rare_cardiacBee_SS.png-e1fe45d333b6b83172e0e052f743b443.ctex"
+uid="uid://2jjwuy0tkqrv"
+path="res://.godot/imported/BoxOpening_SmallIntestines_rare_SS.png-5782bb622387a38447a59a35152e6a51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpriteSheets/BoxOpening_heart_rare_cardiacBee_SS.png"
-dest_files=["res://.godot/imported/BoxOpening_heart_rare_cardiacBee_SS.png-e1fe45d333b6b83172e0e052f743b443.ctex"]
+source_file="res://Assets/SpriteSheets/BoxOpening_SmallIntestines_rare_SS.png"
+dest_files=["res://.godot/imported/BoxOpening_SmallIntestines_rare_SS.png-5782bb622387a38447a59a35152e6a51.ctex"]
 
 [params]
 
