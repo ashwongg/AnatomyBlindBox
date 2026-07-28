@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_d5y88")
-question_info = "What body system moves blood through the body?"
-options = Array[String](["Respiratory", "Circulatory", "Urinary ", "Nervous"])
-correct = "Circulatory"
-hint = "It's part of the system the heart belongs to"
+question_info = "Which organ allows you to breathe? "
+options = Array[String](["Kidney", "Stomach", "Lungs", "Small Intestines"])
+correct = "Lungs"
+hint = "It is located in the chest and protected by the rib cage."
 metadata/_custom_type_script = "uid://0h3w8u20208c"

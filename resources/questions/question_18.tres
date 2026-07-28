@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://desyaljbo0vh"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_2v70p"]
+
+[resource]
+script = ExtResource("1_2v70p")
+question_info = "What is the name of the organ where your food gets digested?"
+options = Array[String](["Lungs", "Liver", "Stomach", "Brain"])
+correct = "Stomach"
+hint = "It is a puch like organ"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

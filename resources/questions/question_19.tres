@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bjh1aepk5lvk5"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_ag65i"]
+
+[resource]
+script = ExtResource("2_ag65i")
+question_info = "What is the name of the organ that is the smaller version of the Large Intestines?"
+options = Array[String](["Brain", "Small Intestines", "Kidney", "Stomach"])
+correct = "Small Intestines"
+hint = "This organ is long and coiled."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

@@ -71,3 +71,4 @@ icon = ExtResource("28_phc7p")
 flat = true
 
 [node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("31_nc30s")]
+volume_db = -25.0

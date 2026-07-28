@@ -5,10 +5,10 @@
 
 [resource]
 script = ExtResource("1_hw5gd")
-question_info = "What is this organ?"
+question_info = "What is the organ found between your lungs?"
 type = 1
 question_image = ExtResource("1_2s40t")
-options = Array[String](["Brain", "Heart", "Eye", "Kidney"])
+options = Array[String](["Liver", "Kidney", "Brain", "Heart"])
 correct = "Heart"
-hint = "It keeps you alive"
+hint = "It is part of the circulatory system."
 metadata/_custom_type_script = "uid://0h3w8u20208c"

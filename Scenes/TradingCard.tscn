@@ -187,6 +187,7 @@ icon = ExtResource("3_72lva")
 flat = true
 
 [node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("4_7anjc")]
+volume_db = -25.0
 
 [connection signal="pressed" from="HeartCard" to="." method="_on_heart_card_pressed"]
 [connection signal="pressed" from="Rare_HeartCard" to="." method="_on_rare_heart_card_pressed"]

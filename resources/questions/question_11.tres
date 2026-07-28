@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bxh3jvnjln4cu"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_s887a"]
+
+[resource]
+script = ExtResource("1_s887a")
+question_info = "Which organ helps you think, learn and remember?"
+options = Array[String](["Heart", "Stomach", "Brain", "Liver"])
+correct = "Brain"
+hint = "It is inside your head."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

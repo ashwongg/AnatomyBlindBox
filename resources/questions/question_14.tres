@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://imcwpus7fv3q"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_yhpj0"]
+
+[resource]
+script = ExtResource("1_yhpj0")
+question_info = "This organ breaks down food using acid."
+options = Array[String](["Lungs", "Brain", "Stomach", "Kidneys"])
+correct = "Stomach"
+hint = "It is a stretchy, pouch-shaped organ."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

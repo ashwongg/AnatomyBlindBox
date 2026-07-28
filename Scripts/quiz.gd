@@ -8,7 +8,7 @@ var buttons : Array[Button] = []
 var labels : Array[Label] = []
 
 var index : int 
-var correct: int 
+var correct: int
 
 @onready var label_question: Label = $Control/MarginContainer/Label_Question
 @onready var question: Node2D = $Control/Question
@@ -38,6 +38,7 @@ func _ready() -> void:
 		push_error("CRITICAL: You forgot to assign a Question_collection resource to quiz_c in the Inspector!")
 		return
 		
+
 	shuffled_collection = quiz_c.collection.duplicate()
 	shuffled_collection.shuffle()
 	
@@ -78,7 +79,7 @@ func _ready() -> void:
 
 func load_quiz() -> void: 
 	print("Loading quiz! Current index: ", index, " Total questions: ", shuffled_collection.size())
-	if index >= shuffled_collection.size():
+	if index >= 10:
 		load_menu()
 		return
 		
@@ -97,6 +98,7 @@ func load_quiz() -> void:
 		question_type.question_Type.text: 
 			image.texture = no_image
 		question_type.question_Type.image: 
+			$Control/Image.visible = true
 			image.texture = shuffled_collection[index].question_image
 			
 func button_answer(button: Button) -> void: 
@@ -132,13 +134,14 @@ func button_answer(button: Button) -> void:
 			if i < labels.size() and labels[i].text == correct_answer_text:
 				buttons[i].modulate = color_right
 				break
-	
-	load_next_question()
+	$Control/Image.visible = false
+	$"next button".visible = true 
+
 	
 func load_next_question() -> void: 
-	# Increased from 0.4 to 2.5 seconds so the player can see the correct answer
-	await get_tree().create_timer(2.5).timeout
-	
+	$"next button".visible = false
+
+
 	# Reset button states and colors for the next question
 	for bt in buttons:
 		bt.modulate = Color.WHITE
@@ -187,3 +190,7 @@ func _on_skelly_pressed() -> void:
 
 func _on_book_pressed() -> void:
 	$Window.visible = false 
+
+
+func _on_next_button_pressed() -> void:
+	load_next_question()

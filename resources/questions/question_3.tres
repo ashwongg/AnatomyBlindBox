@@ -4,9 +4,8 @@
 
 [resource]
 script = ExtResource("1_b75nv")
-question_info = "Skeletons are made of ___?
-"
-options = Array[String](["Bones", "Blood", "Organs", "Skin"])
+question_info = "Skeletons are made of ___?"
+options = Array[String](["Blood", "Bones", "Organs", "Skin"])
 correct = "Bones"
-hint = "Its white"
+hint = "They are hard and strong."
 metadata/_custom_type_script = "uid://0h3w8u20208c"

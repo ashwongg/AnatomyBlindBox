@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_etm6x")
-question_info = "What is the biggest organ of the body?"
-options = Array[String](["Heart", "Brain", "Skin", "Stomach"])
+question_info = "What is the biggest organ in your body?"
+options = Array[String](["Heart", "Skin", "Brain", "Stomach"])
 correct = "Skin"
-hint = "It covers your whole body"
+hint = "It covers your whole body!"
 metadata/_custom_type_script = "uid://0h3w8u20208c"

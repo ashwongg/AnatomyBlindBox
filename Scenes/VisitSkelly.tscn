@@ -265,6 +265,7 @@ icon = ExtResource("14_beb5f")
 flat = true
 
 [node name="BGMManager" parent="." unique_id=1625291609 instance=ExtResource("15_4xe5t")]
+volume_db = -25.0
 
 [connection signal="pressed" from="brain" to="." method="_on_brain_pressed"]
 [connection signal="pressed" from="brain2" to="." method="_on_brain_pressed"]

@@ -106,10 +106,9 @@ func _on_open_box_pressed() -> void:
 	# Clear static placeholders
 	placeholder_openbox.hide()
 	
-	# Configure single animator node to run specific target animation block
 	organ_opener.show()
-	organ_opener.stop()
 	organ_opener.animation = prize_data["anim_name"]
+	organ_opener.stop()
 	organ_opener.frame = 0 
 	organ_opener.play()
 	

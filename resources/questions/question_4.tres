@@ -1,11 +1,14 @@
-[gd_resource type="Resource" format=3 uid="uid://bdfq662rpgi5m"]
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bdfq662rpgi5m"]
 
-[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://resources/questions/question_resource.gd" id="1_ukhu6"]
+[ext_resource type="Texture2D" uid="uid://dcxeaumbwoyvj" path="res://Assets/Questions_images/Liver.png" id="1_jjxo3"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_epo5m"]
 
 [resource]
-script = ExtResource("1_ukhu6")
-question_info = "What is the biggest bone in your body? 
-"
-options = Array[String](["Tibia", "Ulnar", "Femur", "Sternum"])
-correct = "Femur"
+script = ExtResource("2_epo5m")
+question_info = "Which system does the liver belong to? "
+type = 1
+question_image = ExtResource("1_jjxo3")
+options = Array[String](["Nervous", "Digestive", "Urinary ", "Respiratory"])
+correct = "Digestive"
+hint = "It is the largest internal organ."
 metadata/_custom_type_script = "uid://0h3w8u20208c"

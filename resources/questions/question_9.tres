@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://djvgvnfvnq1nw"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_nf64y"]
+
+[resource]
+script = ExtResource("1_nf64y")
+question_info = "After the food leaves the stomach, nutrients are absorbed here."
+options = Array[String](["Kidney", "Lungs", "Large Intestines", "Small Intestines"])
+correct = "Small Intestines"
+hint = "This organ is long and coiled."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://r76oevj3jqjo"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_4scmu"]
+
+[resource]
+script = ExtResource("1_4scmu")
+question_info = "Which organ removes toxins from the blood?"
+options = Array[String](["Liver", "Lungs", "Small intestines", "Brain"])
+correct = "Liver"
+hint = "It is the largest internal organ."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

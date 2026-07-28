@@ -1,15 +1,11 @@
 [gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://cux6cv16gh24"]
 
 [ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_bmlec"]
-[ext_resource type="Texture2D" uid="uid://dcxeaumbwoyvj" path="res://Assets/Questions_images/Liver.png" id="1_rrn1e"]
 
 [resource]
 script = ExtResource("1_bmlec")
-question_info = "Which system does the liver belong to? 
-"
-type = 1
-question_image = ExtResource("1_rrn1e")
-options = Array[String](["Nervous", "Digestive", "Urinary", "Respiratory"])
-correct = "Digestive"
-hint = "Part of the system that your stomach belongs to"
+question_info = "What body system moves blood through the body and includes the heart, blood, and blood vessels?"
+options = Array[String](["Respiratory", "Circulatory", "Urinary", "Nervous"])
+correct = "Circulatory"
+hint = "It is a transportation system inside your body."
 metadata/_custom_type_script = "uid://0h3w8u20208c"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bksbvd8nlfquv"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_sp0e7"]
+
+[resource]
+script = ExtResource("1_sp0e7")
+question_info = "What is the organ in your head?"
+options = Array[String](["Lungs", "Liver", "Stomach", "Brain"])
+correct = "Brain"
+hint = "The only organ of the nervous system."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

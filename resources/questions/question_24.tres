@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bnnufh30e8sa0"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_vrnpl"]
+
+[resource]
+script = ExtResource("1_vrnpl")
+question_info = "What did Quizzard do to Skelly’s organs?"
+options = Array[String](["Buried them in the ground.", "Gave them a bubble bath.", "Ate them for dinner.", "Locked them in Mystery Boxes."])
+correct = "Locked them in Mystery Boxes."
+hint = "You didn't read the opening story??"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

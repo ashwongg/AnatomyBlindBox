@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://b7l07hri1582w"]
+
+[ext_resource type="Texture2D" uid="uid://wlafnpjm8vpw" path="res://Assets/Questions_images/quizzard.png" id="1_g12am"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_536sp"]
+
+[resource]
+script = ExtResource("2_536sp")
+question_info = "What is the name of the bad guy in this game?"
+type = 1
+question_image = ExtResource("1_g12am")
+options = Array[String](["Ash", "Angeline", "Vanessa", "Quizzard"])
+correct = "Quizzard"
+hint = "Starts with Q!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

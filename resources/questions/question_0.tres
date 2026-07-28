@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://wqli0o11pl2q"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_4s2ic"]
+[ext_resource type="Texture2D" uid="uid://cq3po4im5rq0d" path="res://Assets/Questions_images/skellys.png" id="1_aj6p5"]
+
+[resource]
+script = ExtResource("1_4s2ic")
+question_info = "What is the skeleton’s name? "
+type = 1
+question_image = ExtResource("1_aj6p5")
+options = Array[String](["Skelly", "Skeleton Sr.", "Skeletor", "Mr. Bones"])
+correct = "Skelly"
+hint = "You don’t know my name??"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

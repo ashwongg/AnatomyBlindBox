@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://ctaw5lpjg1osm"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_jh41k"]
+
+[resource]
+script = ExtResource("1_jh41k")
+question_info = "Which organ is shaped like a bean and has 2 of them?"
+options = Array[String](["Heart", "Kidney", "Large Intestines", "Lungs"])
+correct = "Kidney"
+hint = "It is part of the Urinary system."
+metadata/_custom_type_script = "uid://0h3w8u20208c"

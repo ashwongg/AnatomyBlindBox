@@ -13,22 +13,22 @@ func _ready():
 	ResourceLoader.load_threaded_request("res://Scenes/blind_box.tscn")
 	ResourceLoader.load_threaded_request("res://Scenes/VisitSkelly.tscn")
 	
-	if GlobalVariables.has_lungs:
+	if GlobalVariables.has_rare_lungs:
 		$lungs.visible = true
-	if GlobalVariables.has_brain:
+	if GlobalVariables.has_rare_brain:
 		$brain.visible = true
-	if GlobalVariables.has_largeintestines:
+	if GlobalVariables.has_rare_largeintestines:
 		$"large intestine".visible = true
-	if GlobalVariables.has_smallintestines:
+	if GlobalVariables.has_rare_smallintestines:
 		$"small intestine".visible = true
-	if GlobalVariables.has_kidneys:
+	if GlobalVariables.has_rare_kidneys:
 		$L_Kidney.visible = true
 		$R_Kidney.visible = true
-	if GlobalVariables.has_liver:
+	if GlobalVariables.has_rare_liver:
 		$liver.visible = true
-	if GlobalVariables.has_heart:
+	if GlobalVariables.has_rare_heart:
 		$heart.visible = true
-	if GlobalVariables.has_stomach:
+	if GlobalVariables.has_rare_stomach:
 		$stomach.visible = true
 	
 

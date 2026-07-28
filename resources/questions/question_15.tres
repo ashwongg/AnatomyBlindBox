@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://dqt75reice6c"]
+
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="1_2f05e"]
+
+[resource]
+script = ExtResource("1_2f05e")
+question_info = "Which organ is located in the chest and protected by the rib cage. There are 2 of them!"
+options = Array[String](["Brain", "Liver", "Stomach", "Lungs"])
+correct = "Lungs"
+hint = "It is part of the respiratory system!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"
