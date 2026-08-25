@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://buntpii8n1kaw"]
+
+[ext_resource type="Texture2D" uid="uid://bb0xljytbhfrc" path="res://Assets/Questions_images/Heart.png" id="1_q3dm5"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_uaunn"]
+
+[resource]
+script = ExtResource("2_uaunn")
+question_info = "What is the name of this organ?"
+type = 1
+question_image = ExtResource("1_q3dm5")
+options = Array[String](["Brain", "Stomach", "Small Intestines", "Heart"])
+correct = "Heart"
+hint = "It beats in your chest"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

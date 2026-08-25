@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cb86bs4faj08s"]
+
+[ext_resource type="Script" uid="uid://d28dv3vyg1khu" path="res://Scenes/food.tscn.gd" id="1_fhto3"]
+[ext_resource type="Texture2D" uid="uid://bw6acjnmpgtu8" path="res://Assets/Minigame/apple.png" id="1_j4qko"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhto3"]
+radius = 35.15
+
+[node name="food" type="CharacterBody2D" unique_id=169718543]
+script = ExtResource("1_fhto3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280309872]
+shape = SubResource("CircleShape2D_fhto3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1877996395]
+position = Vector2(-1.4999981, 2.250002)
+scale = Vector2(0.44499996, 0.40749997)
+texture = ExtResource("1_j4qko")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bgv5wbxnlr0ja"]
+
+[ext_resource type="Script" uid="uid://bb8jxoymv6pgo" path="res://Scenes/air.gd" id="1_im23f"]
+[ext_resource type="Texture2D" uid="uid://btei75dc7i8f2" path="res://Assets/Minigame/oxygen.png" id="2_im23f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhto3"]
+radius = 35.15
+
+[node name="air" type="CharacterBody2D" unique_id=169718543]
+script = ExtResource("1_im23f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280309872]
+shape = SubResource("CircleShape2D_fhto3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1877996395]
+position = Vector2(-1.000001, 0)
+scale = Vector2(0.325, 0.32249996)
+texture = ExtResource("2_im23f")

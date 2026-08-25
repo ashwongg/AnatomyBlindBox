@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://3my6ygwe207w"]
+
+[ext_resource type="Texture2D" uid="uid://dcxeaumbwoyvj" path="res://Assets/Questions_images/Liver.png" id="1_ge7nn"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_g5vxi"]
+
+[resource]
+script = ExtResource("2_g5vxi")
+question_info = "What is the name of this organ?"
+type = 1
+question_image = ExtResource("1_ge7nn")
+options = Array[String](["Brain", "Kidneys", "Heart", "Liver"])
+correct = "Liver"
+hint = "It's part of the digestive system!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

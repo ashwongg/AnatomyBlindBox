@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://bmictjxvt8k3d"]
+
+[ext_resource type="Texture2D" uid="uid://6427qarkcmdq" path="res://Assets/Questions_images/large_intestine.png" id="1_rdrsg"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_gak7p"]
+
+[resource]
+script = ExtResource("2_gak7p")
+question_info = "What is the name of this organ?"
+type = 1
+question_image = ExtResource("1_rdrsg")
+options = Array[String](["Small Intestines", "Large Intestines", "Liver", "Kidney"])
+correct = "Large Intestines"
+hint = "It is the large one!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

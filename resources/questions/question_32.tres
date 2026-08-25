@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://dov5qu1f5wsxd"]
+
+[ext_resource type="Texture2D" uid="uid://bkx470tf5io85" path="res://Assets/Questions_images/stomach.png" id="1_rrgot"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_qoq17"]
+
+[resource]
+script = ExtResource("2_qoq17")
+question_info = "What is the name of this organ?"
+type = 1
+question_image = ExtResource("1_rrgot")
+options = Array[String](["Heart", "Stomach", "Brain", "Kidneys"])
+correct = "Stomach"
+hint = "Your food goes into this organ!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"

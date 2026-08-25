@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://brj6vbea2u3wi"]
+
+[ext_resource type="Script" uid="uid://l2nqvtdqp7ys" path="res://Scenes/mini_game.gd" id="1_jdjdp"]
+[ext_resource type="Texture2D" uid="uid://cbv7dyyevc6k7" path="res://Assets/minigame_background.jpg" id="1_rq21l"]
+[ext_resource type="Script" uid="uid://baqb2qwv51iqu" path="res://Scenes/spawner.gd" id="2_vcft8"]
+[ext_resource type="PackedScene" uid="uid://cb86bs4faj08s" path="res://Scenes/food.tscn" id="3_sbppy"]
+[ext_resource type="PackedScene" uid="uid://bgv5wbxnlr0ja" path="res://Scenes/air.tscn" id="4_t1rg2"]
+[ext_resource type="PackedScene" uid="uid://bxwf4y38strtl" path="res://Scenes/toy.tscn" id="5_jdjdp"]
+
+[node name="MiniGame" type="Control" unique_id=215133522]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jdjdp")
+
+[node name="background" type="TextureRect" parent="." unique_id=1629835272]
+layout_mode = 0
+offset_right = 1291.0
+offset_bottom = 736.0
+texture = ExtResource("1_rq21l")
+expand_mode = 1
+
+[node name="spawner" type="Node2D" parent="." unique_id=1239948664]
+position = Vector2(-107, 410)
+script = ExtResource("2_vcft8")
+food_scene = ExtResource("3_sbppy")
+air_scene = ExtResource("4_t1rg2")
+toy_scene = ExtResource("5_jdjdp")
+
+[node name="Timer" type="Timer" parent="spawner" unique_id=1715992121]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="spawner/Timer" to="spawner" method="_on_timer_timeout"]

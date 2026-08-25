@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cb5eho4yb3nuo" path="res://Assets/Quiz Button.png" id="3_fdxuh"]
 [ext_resource type="Resource" uid="uid://wqli0o11pl2q" path="res://resources/questions/question_0.tres" id="3_v25gn"]
 [ext_resource type="Resource" uid="uid://stppv2bw0kib" path="res://resources/questions/question_2.tres" id="4_gpq0x"]
-[ext_resource type="Texture2D" uid="uid://dcxeaumbwoyvj" path="res://Assets/Questions_images/Liver.png" id="5_gpq0x"]
-[ext_resource type="Texture2D" uid="uid://bb0xljytbhfrc" path="res://Assets/Questions_images/Heart.png" id="5_n4boq"]
 [ext_resource type="Resource" uid="uid://bjrkgwx74p8er" path="res://resources/questions/question_3.tres" id="6_j8nph"]
 [ext_resource type="Resource" uid="uid://cw7j5xmmjjwrv" path="res://resources/questions/question_6.tres" id="7_28c1y"]
 [ext_resource type="Resource" uid="uid://bdfq662rpgi5m" path="res://resources/questions/question_4.tres" id="7_sc2oy"]
@@ -35,99 +33,21 @@
 [ext_resource type="Texture2D" uid="uid://bolwl51rvfblo" path="res://Assets/next_arrow.png" id="19_n4boq"]
 [ext_resource type="Resource" uid="uid://bksbvd8nlfquv" path="res://resources/questions/question_17.tres" id="20_1wbwh"]
 [ext_resource type="Resource" uid="uid://desyaljbo0vh" path="res://resources/questions/question_18.tres" id="21_4cr0c"]
-[ext_resource type="Texture2D" uid="uid://bdqx2xpjbxf86" path="res://Assets/Questions_images/small_intestine.png" id="22_u14e1"]
 [ext_resource type="Resource" uid="uid://bjh1aepk5lvk5" path="res://resources/questions/question_19.tres" id="22_v25gn"]
 [ext_resource type="Resource" uid="uid://b7l07hri1582w" path="res://resources/questions/question_23.tres" id="23_sc2oy"]
 [ext_resource type="Resource" uid="uid://bnnufh30e8sa0" path="res://resources/questions/question_24.tres" id="24_2uj87"]
-[ext_resource type="Texture2D" uid="uid://b61gjlmi4bd21" path="res://Assets/Questions_images/brain.png" id="25_tc6tv"]
-[ext_resource type="Texture2D" uid="uid://bj07d5eedync0" path="res://Assets/Questions_images/Kidney.png" id="27_ejk8i"]
-[ext_resource type="Texture2D" uid="uid://6427qarkcmdq" path="res://Assets/Questions_images/large_intestine.png" id="28_hfimo"]
-[ext_resource type="Texture2D" uid="uid://bto7na371yvif" path="res://Assets/Questions_images/lungs.png" id="30_1wbwh"]
-[ext_resource type="Texture2D" uid="uid://bkx470tf5io85" path="res://Assets/Questions_images/stomach.png" id="32_4cr0c"]
-
-[sub_resource type="Resource" id="Resource_u14e1"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("25_tc6tv")
-options = Array[String](["Heart", "Brain", "Liver", "Kidney"])
-correct = "Brain"
-hint = "It's in your head"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_6i45y"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("5_n4boq")
-options = Array[String](["Brain", "Stomach", "Small Intestines", "Heart"])
-correct = "Heart"
-hint = "It beats in your chest"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_isq1x"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("27_ejk8i")
-options = Array[String](["Liver", "Brain", "Kidneys", "Lungs"])
-correct = "Kidneys"
-hint = "They're bean shaped!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_3j6am"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("28_hfimo")
-options = Array[String](["Small Intestines", "Large Intestines", "Liver", "Kidney"])
-correct = "Large Intestines"
-hint = "It is the large one!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_7k61f"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("5_gpq0x")
-options = Array[String](["Brain", "Kidneys", "Heart", "Liver"])
-correct = "Liver"
-hint = "It's part of the digestive system!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_5fuw4"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("30_1wbwh")
-options = Array[String](["Small Intestines", "Lungs", "Heart", "Kidneys"])
-correct = "Lungs"
-hint = "Helps your breathe!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_3ge4e"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("22_u14e1")
-options = Array[String](["Large Intestines", "Small Intestines", "Heart", "Stomach"])
-correct = "Small Intestines"
-hint = "The smaller one!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
-
-[sub_resource type="Resource" id="Resource_0op8v"]
-script = ExtResource("2_84grc")
-question_info = "What is the name of this organ?"
-type = 1
-question_image = ExtResource("32_4cr0c")
-options = Array[String](["Heart", "Stomach", "Brain", "Kidneys"])
-correct = "Stomach"
-hint = "Your food goes into this organ!"
-metadata/_custom_type_script = "uid://0h3w8u20208c"
+[ext_resource type="Resource" uid="uid://x2en3bp56eti" path="res://resources/questions/question_25.tres" id="25_tc6tv"]
+[ext_resource type="Resource" uid="uid://buntpii8n1kaw" path="res://resources/questions/question_26.tres" id="26_ejk8i"]
+[ext_resource type="Resource" uid="uid://3fm7iym4twkg" path="res://resources/questions/question_27.tres" id="27_hfimo"]
+[ext_resource type="Resource" uid="uid://bmictjxvt8k3d" path="res://resources/questions/question_28.tres" id="28_1wbwh"]
+[ext_resource type="Resource" uid="uid://3my6ygwe207w" path="res://resources/questions/question_29.tres" id="29_4cr0c"]
+[ext_resource type="Resource" uid="uid://clj2wbmh7aovm" path="res://resources/questions/question_30.tres" id="30_u14e1"]
+[ext_resource type="Resource" uid="uid://coeunwr4lubiv" path="res://resources/questions/question_31.tres" id="31_6i45y"]
+[ext_resource type="Resource" uid="uid://dov5qu1f5wsxd" path="res://resources/questions/question_32.tres" id="32_isq1x"]
 
 [sub_resource type="Resource" id="Resource_jmbid"]
 script = ExtResource("3_5od8v")
-collection = Array[ExtResource("2_84grc")]([ExtResource("3_v25gn"), ExtResource("3_0iro7"), ExtResource("4_gpq0x"), ExtResource("6_j8nph"), ExtResource("7_sc2oy"), ExtResource("8_2uj87"), ExtResource("7_28c1y"), ExtResource("8_esplf"), ExtResource("11_q7olf"), ExtResource("12_5w7d5"), ExtResource("13_hwvmb"), ExtResource("14_wsf4s"), ExtResource("15_6hwhi"), ExtResource("16_dtcfw"), ExtResource("17_tc6tv"), ExtResource("18_ejk8i"), ExtResource("19_hfimo"), ExtResource("20_1wbwh"), ExtResource("21_4cr0c"), ExtResource("22_v25gn"), ExtResource("23_sc2oy"), ExtResource("24_2uj87"), SubResource("Resource_u14e1"), SubResource("Resource_6i45y"), SubResource("Resource_isq1x"), SubResource("Resource_3j6am"), SubResource("Resource_7k61f"), SubResource("Resource_5fuw4"), SubResource("Resource_3ge4e"), SubResource("Resource_0op8v")])
+collection = Array[ExtResource("2_84grc")]([ExtResource("3_v25gn"), ExtResource("3_0iro7"), ExtResource("4_gpq0x"), ExtResource("6_j8nph"), ExtResource("7_sc2oy"), ExtResource("8_2uj87"), ExtResource("7_28c1y"), ExtResource("8_esplf"), ExtResource("11_q7olf"), ExtResource("12_5w7d5"), ExtResource("13_hwvmb"), ExtResource("14_wsf4s"), ExtResource("15_6hwhi"), ExtResource("16_dtcfw"), ExtResource("17_tc6tv"), ExtResource("18_ejk8i"), ExtResource("19_hfimo"), ExtResource("20_1wbwh"), ExtResource("21_4cr0c"), ExtResource("22_v25gn"), ExtResource("23_sc2oy"), ExtResource("24_2uj87"), ExtResource("25_tc6tv"), ExtResource("26_ejk8i"), ExtResource("27_hfimo"), ExtResource("28_1wbwh"), ExtResource("29_4cr0c"), ExtResource("30_u14e1"), ExtResource("31_6i45y"), ExtResource("32_isq1x")])
 metadata/_custom_type_script = "uid://cm21ytef347dc"
 
 [node name="Node2D" type="Node2D" unique_id=1395772487]

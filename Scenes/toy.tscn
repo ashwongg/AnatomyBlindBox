@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxwf4y38strtl"]
+
+[ext_resource type="Script" uid="uid://rpwuqbls5ntp" path="res://Scenes/toy.gd" id="1_iblrf"]
+[ext_resource type="Texture2D" uid="uid://cytqtjdxi15sh" path="res://Assets/Minigame/lego.png" id="2_q4aat"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhto3"]
+radius = 35.15
+
+[node name="toy" type="CharacterBody2D" unique_id=169718543]
+script = ExtResource("1_iblrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1280309872]
+shape = SubResource("CircleShape2D_fhto3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1877996395]
+position = Vector2(-1.4999981, 2.250002)
+scale = Vector2(0.44499996, 0.40749997)
+texture = ExtResource("2_q4aat")

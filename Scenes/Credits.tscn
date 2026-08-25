@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbn8nol4syjyt"]
 
 [ext_resource type="Script" uid="uid://ca82en0vrcjoa" path="res://Scripts/credits.gd" id="1_xbebw"]
-[ext_resource type="Texture2D" uid="uid://cedw614h63x02" path="res://Assets/credits_page.png" id="1_ynf4x"]
+[ext_resource type="Texture2D" uid="uid://bku1wla4rh7qh" path="res://Assets/Credits_1.jpg" id="2_uy3b0"]
 [ext_resource type="Texture2D" uid="uid://bi3hrhe46n1i6" path="res://Assets/Buttons/Back.png" id="3_7xmno"]
 [ext_resource type="PackedScene" uid="uid://cmfiqlgbwdr6i" path="res://Scenes/bgm_manager.tscn" id="4_uy3b0"]
 
@@ -16,19 +16,20 @@ script = ExtResource("1_xbebw")
 
 [node name="LandingPage" type="TextureRect" parent="." unique_id=1336377741]
 layout_mode = 0
-offset_left = -3.999878
-offset_top = -6.999939
-offset_right = 1668.024
-offset_bottom = 1108.8137
+offset_left = 12.999999
+offset_top = -7.999999
+offset_right = 1678.508
+offset_bottom = 1104.7356
 scale = Vector2(0.7673334, 0.64975)
-texture = ExtResource("1_ynf4x")
+texture = ExtResource("2_uy3b0")
+expand_mode = 1
 
 [node name="Back" type="Button" parent="." unique_id=913762814]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 593.0
-offset_right = 1223.0
-offset_bottom = 672.0
+offset_left = 1000.0
+offset_top = 637.0
+offset_right = 1265.0
+offset_bottom = 727.0
 theme_override_font_sizes/font_size = 42
 text = "
 "

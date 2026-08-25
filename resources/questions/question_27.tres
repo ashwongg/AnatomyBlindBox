@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question_resource" format=3 uid="uid://3fm7iym4twkg"]
+
+[ext_resource type="Texture2D" uid="uid://bj07d5eedync0" path="res://Assets/Questions_images/Kidney.png" id="1_61a1i"]
+[ext_resource type="Script" uid="uid://0h3w8u20208c" path="res://Scenes/question_resource.gd" id="2_pno66"]
+
+[resource]
+script = ExtResource("2_pno66")
+question_info = "What is the name of this organ?"
+type = 1
+question_image = ExtResource("1_61a1i")
+options = Array[String](["Liver", "Brain", "Kidneys", "Lungs"])
+correct = "Kidneys"
+hint = "They're bean shaped!"
+metadata/_custom_type_script = "uid://0h3w8u20208c"
